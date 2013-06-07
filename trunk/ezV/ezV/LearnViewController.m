@@ -1,18 +1,18 @@
 //
-//  SettingViewController.m
+//  LearnViewController.m
 //  ezV
 //
 //  Created by Duong on 6/7/13.
 //  Copyright (c) 2013 ezV. All rights reserved.
 //
 
-#import "SettingViewController.h"
+#import "LearnViewController.h"
 
-@interface SettingViewController ()
+@interface LearnViewController ()
 
 @end
 
-@implementation SettingViewController
+@implementation LearnViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

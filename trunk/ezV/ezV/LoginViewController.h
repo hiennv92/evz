@@ -17,4 +17,7 @@
 
 -(IBAction)signInButtonPressed:(id)sender;
 -(IBAction)signUpButtonPressed:(id)sender;
+- (IBAction)returnMenu:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *labelUserName;
+@property (strong, nonatomic) IBOutlet UILabel *labelPassword;
 @end

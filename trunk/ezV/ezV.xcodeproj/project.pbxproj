@@ -19,6 +19,21 @@
 		34D194681747E5B800193599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194671747E5B800193599 /* Default.png */; };
 		34D1946A1747E5B800193599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194691747E5B800193599 /* Default@2x.png */; };
 		34D1946C1747E5B800193599 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D1946B1747E5B800193599 /* Default-568h@2x.png */; };
+		5FFDC87817613499007B19E0 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC87617613499007B19E0 /* MenuView.m */; };
+		5FFDC87D1761417A007B19E0 /* MenuView_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC87C1761417A007B19E0 /* MenuView_iphone.xib */; };
+		5FFDC87F176141A9007B19E0 /* MenuView_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC87E176141A9007B19E0 /* MenuView_ipad.xib */; };
+		5FFDC88E17614ADE007B19E0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC88C17614ADE007B19E0 /* TestViewController.m */; };
+		5FFDC88F17614ADE007B19E0 /* TestViewController_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC88D17614ADE007B19E0 /* TestViewController_ipad.xib */; };
+		5FFDC89317614AF6007B19E0 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC89117614AF6007B19E0 /* SettingViewController.m */; };
+		5FFDC89417614AF6007B19E0 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89217614AF6007B19E0 /* SettingViewController.xib */; };
+		5FFDC89817614B22007B19E0 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC89617614B22007B19E0 /* IntroViewController.m */; };
+		5FFDC89917614B22007B19E0 /* IntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89717614B22007B19E0 /* IntroViewController.xib */; };
+		5FFDC89D17614B5F007B19E0 /* LearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC89B17614B5F007B19E0 /* LearnViewController.m */; };
+		5FFDC89E17614B5F007B19E0 /* LearnViewController_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89C17614B5F007B19E0 /* LearnViewController_ipad.xib */; };
+		5FFDC8A017614B75007B19E0 /* LearnViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89F17614B75007B19E0 /* LearnViewController_iphone.xib */; };
+		5FFDC8A217614BF0007B19E0 /* TestViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC8A117614BF0007B19E0 /* TestViewController_iphone.xib */; };
+		5FFDC8A417615C8D007B19E0 /* DataLanguages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */; };
+		5FFDC8A71761A851007B19E0 /* GetDataLanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +54,27 @@
 		34D194671747E5B800193599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		34D194691747E5B800193599 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		34D1946B1747E5B800193599 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5FFDC87517613499007B19E0 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
+		5FFDC87617613499007B19E0 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
+		5FFDC87C1761417A007B19E0 /* MenuView_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView_iphone.xib; sourceTree = "<group>"; };
+		5FFDC87E176141A9007B19E0 /* MenuView_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView_ipad.xib; sourceTree = "<group>"; };
+		5FFDC88B17614ADE007B19E0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		5FFDC88C17614ADE007B19E0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		5FFDC88D17614ADE007B19E0 /* TestViewController_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController_ipad.xib; sourceTree = "<group>"; };
+		5FFDC89017614AF6007B19E0 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		5FFDC89117614AF6007B19E0 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		5FFDC89217614AF6007B19E0 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
+		5FFDC89517614B22007B19E0 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		5FFDC89617614B22007B19E0 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		5FFDC89717614B22007B19E0 /* IntroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IntroViewController.xib; sourceTree = "<group>"; };
+		5FFDC89A17614B5F007B19E0 /* LearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnViewController.h; sourceTree = "<group>"; };
+		5FFDC89B17614B5F007B19E0 /* LearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnViewController.m; sourceTree = "<group>"; };
+		5FFDC89C17614B5F007B19E0 /* LearnViewController_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController_ipad.xib; sourceTree = "<group>"; };
+		5FFDC89F17614B75007B19E0 /* LearnViewController_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController_iphone.xib; sourceTree = "<group>"; };
+		5FFDC8A117614BF0007B19E0 /* TestViewController_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController_iphone.xib; sourceTree = "<group>"; };
+		5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataLanguages.plist; sourceTree = "<group>"; };
+		5FFDC8A51761A851007B19E0 /* GetDataLanguages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDataLanguages.h; sourceTree = "<group>"; };
+		5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDataLanguages.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +121,17 @@
 		34D1945B1747E5B800193599 /* ezV */ = {
 			isa = PBXGroup;
 			children = (
+				5FFDC88517614AA0007B19E0 /* IntroView */,
+				5FFDC88417614A89007B19E0 /* SettingView */,
+				5FFDC88317614A82007B19E0 /* TestView */,
+				5FFDC88217614A7A007B19E0 /* LearnView */,
+				5FFDC8811761487C007B19E0 /* LoginView */,
+				5FFDC88017614868007B19E0 /* MenuView */,
+				34D1945C1747E5B800193599 /* Supporting Files */,
 				34D194641747E5B800193599 /* AppDelegate.h */,
 				34D194651747E5B800193599 /* AppDelegate.m */,
-				34D1945C1747E5B800193599 /* Supporting Files */,
-				34647F5F1748323C00171D12 /* LoginViewController.h */,
-				34647F601748323C00171D12 /* LoginViewController.m */,
-				34647F611748323C00171D12 /* LoginViewController_ipad.xib */,
-				34647F64174838B100171D12 /* LoginViewController_iphone.xib */,
+				5FFDC8A51761A851007B19E0 /* GetDataLanguages.h */,
+				5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */,
 			);
 			path = ezV;
 			sourceTree = "<group>";
@@ -100,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				34D1945D1747E5B800193599 /* ezV-Info.plist */,
+				5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */,
 				34D1945E1747E5B800193599 /* InfoPlist.strings */,
 				34D194611747E5B800193599 /* main.m */,
 				34D194631747E5B800193599 /* ezV-Prefix.pch */,
@@ -108,6 +149,70 @@
 				34D1946B1747E5B800193599 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5FFDC88017614868007B19E0 /* MenuView */ = {
+			isa = PBXGroup;
+			children = (
+				5FFDC87517613499007B19E0 /* MenuView.h */,
+				5FFDC87617613499007B19E0 /* MenuView.m */,
+				5FFDC87E176141A9007B19E0 /* MenuView_ipad.xib */,
+				5FFDC87C1761417A007B19E0 /* MenuView_iphone.xib */,
+			);
+			name = MenuView;
+			sourceTree = "<group>";
+		};
+		5FFDC8811761487C007B19E0 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				34647F5F1748323C00171D12 /* LoginViewController.h */,
+				34647F601748323C00171D12 /* LoginViewController.m */,
+				34647F611748323C00171D12 /* LoginViewController_ipad.xib */,
+				34647F64174838B100171D12 /* LoginViewController_iphone.xib */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
+		5FFDC88217614A7A007B19E0 /* LearnView */ = {
+			isa = PBXGroup;
+			children = (
+				5FFDC89A17614B5F007B19E0 /* LearnViewController.h */,
+				5FFDC89B17614B5F007B19E0 /* LearnViewController.m */,
+				5FFDC89C17614B5F007B19E0 /* LearnViewController_ipad.xib */,
+				5FFDC89F17614B75007B19E0 /* LearnViewController_iphone.xib */,
+			);
+			name = LearnView;
+			sourceTree = "<group>";
+		};
+		5FFDC88317614A82007B19E0 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				5FFDC88B17614ADE007B19E0 /* TestViewController.h */,
+				5FFDC88C17614ADE007B19E0 /* TestViewController.m */,
+				5FFDC88D17614ADE007B19E0 /* TestViewController_ipad.xib */,
+				5FFDC8A117614BF0007B19E0 /* TestViewController_iphone.xib */,
+			);
+			name = TestView;
+			sourceTree = "<group>";
+		};
+		5FFDC88417614A89007B19E0 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				5FFDC89017614AF6007B19E0 /* SettingViewController.h */,
+				5FFDC89117614AF6007B19E0 /* SettingViewController.m */,
+				5FFDC89217614AF6007B19E0 /* SettingViewController.xib */,
+			);
+			name = SettingView;
+			sourceTree = "<group>";
+		};
+		5FFDC88517614AA0007B19E0 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+				5FFDC89517614B22007B19E0 /* IntroViewController.h */,
+				5FFDC89617614B22007B19E0 /* IntroViewController.m */,
+				5FFDC89717614B22007B19E0 /* IntroViewController.xib */,
+			);
+			name = IntroView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +272,15 @@
 				34D1946C1747E5B800193599 /* Default-568h@2x.png in Resources */,
 				34647F631748323C00171D12 /* LoginViewController_ipad.xib in Resources */,
 				34647F65174838B100171D12 /* LoginViewController_iphone.xib in Resources */,
+				5FFDC87D1761417A007B19E0 /* MenuView_iphone.xib in Resources */,
+				5FFDC87F176141A9007B19E0 /* MenuView_ipad.xib in Resources */,
+				5FFDC88F17614ADE007B19E0 /* TestViewController_ipad.xib in Resources */,
+				5FFDC89417614AF6007B19E0 /* SettingViewController.xib in Resources */,
+				5FFDC89917614B22007B19E0 /* IntroViewController.xib in Resources */,
+				5FFDC89E17614B5F007B19E0 /* LearnViewController_ipad.xib in Resources */,
+				5FFDC8A017614B75007B19E0 /* LearnViewController_iphone.xib in Resources */,
+				5FFDC8A217614BF0007B19E0 /* TestViewController_iphone.xib in Resources */,
+				5FFDC8A417615C8D007B19E0 /* DataLanguages.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +294,12 @@
 				34D194621747E5B800193599 /* main.m in Sources */,
 				34D194661747E5B800193599 /* AppDelegate.m in Sources */,
 				34647F621748323C00171D12 /* LoginViewController.m in Sources */,
+				5FFDC87817613499007B19E0 /* MenuView.m in Sources */,
+				5FFDC88E17614ADE007B19E0 /* TestViewController.m in Sources */,
+				5FFDC89317614AF6007B19E0 /* SettingViewController.m in Sources */,
+				5FFDC89817614B22007B19E0 /* IntroViewController.m in Sources */,
+				5FFDC89D17614B5F007B19E0 /* LearnViewController.m in Sources */,
+				5FFDC8A71761A851007B19E0 /* GetDataLanguages.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

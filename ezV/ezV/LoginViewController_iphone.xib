@@ -228,8 +228,16 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="717443372"/>
+								<object class="NSColor" key="IBUITintColor">
+									<int key="NSColorSpace">2</int>
+									<bytes key="NSRGB">MCAwIDAAA</bytes>
+								</object>
 							</object>
 						</array>
+						<object class="NSColor" key="IBUITintColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC45ODk5NDIxNjU1IDEgMC42Mjk2NjE0OTg2AA</bytes>
+						</object>
 					</object>
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
@@ -237,7 +245,7 @@
 				<reference key="NSNextKeyView" ref="263556167"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
-					<bytes key="NSRGB">MC40MzgwOTkxNDU2IDAuOTg4NzE2NDgyOSAxAA</bytes>
+					<bytes key="NSRGB">MC45ODk5NDIxNjU1IDEgMC42Mjk2NjE0OTg2AA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -342,11 +350,11 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="424482620"/>
 							<reference ref="324744325"/>
-							<reference ref="717443372"/>
 							<reference ref="263556167"/>
 							<reference ref="350444348"/>
 							<reference ref="733664981"/>
 							<reference ref="653175050"/>
+							<reference ref="717443372"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

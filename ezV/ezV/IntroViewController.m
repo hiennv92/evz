@@ -1,18 +1,18 @@
 //
-//  SettingViewController.m
+//  IntroViewController.m
 //  ezV
 //
 //  Created by Duong on 6/7/13.
 //  Copyright (c) 2013 ezV. All rights reserved.
 //
 
-#import "SettingViewController.h"
+#import "IntroViewController.h"
 
-@interface SettingViewController ()
+@interface IntroViewController ()
 
 @end
 
-@implementation SettingViewController
+@implementation IntroViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

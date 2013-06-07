@@ -1,5 +1,5 @@
 //
-//  SettingViewController.h
+//  TestViewController.h
 //  ezV
 //
 //  Created by Duong on 6/7/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingViewController : UIViewController
+@interface TestViewController : UIViewController
 
 @end

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Chinese</key>
+	<dict/>
+	<key>English</key>
+	<dict>
+		<key>password</key>
+		<string>Password</string>
+		<key>username</key>
+		<string>User name</string>
+		<key>register</key>
+		<string>Register</string>
+		<key>course</key>
+		<string>List of courses</string>
+		<key>login</key>
+		<string>Login</string>
+		<key>help</key>
+		<string>Help</string>
+		<key>learn</key>
+		<string>Study</string>
+		<key>test</key>
+		<string>Do test</string>
+		<key>setting</key>
+		<string>Setting</string>
+	</dict>
+	<key>Japanese</key>
+	<dict/>
+	<key>VietNamese</key>
+	<dict>
+		<key>register</key>
+		<string>Đăng ký</string>
+		<key>login</key>
+		<string>Đăng nhập</string>
+		<key>password</key>
+		<string>Mật khẩu</string>
+		<key>username</key>
+		<string>Tên đăng nhập</string>
+		<key>setting</key>
+		<string>Cài đặt</string>
+		<key>help</key>
+		<string>Hướng dẫn</string>
+		<key>course</key>
+		<string>Danh sách khoá học</string>
+		<key>test</key>
+		<string>Ôn bài</string>
+		<key>learn</key>
+		<string>Học bài</string>
+	</dict>
+</dict>
+</plist>

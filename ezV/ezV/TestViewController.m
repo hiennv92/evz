@@ -1,18 +1,18 @@
 //
-//  SettingViewController.m
+//  TestViewController.m
 //  ezV
 //
 //  Created by Duong on 6/7/13.
 //  Copyright (c) 2013 ezV. All rights reserved.
 //
 
-#import "SettingViewController.h"
+#import "TestViewController.h"
 
-@interface SettingViewController ()
+@interface TestViewController ()
 
 @end
 
-@implementation SettingViewController
+@implementation TestViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

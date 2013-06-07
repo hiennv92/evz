@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
+#import "MenuView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
+@property (assign, nonatomic) NSInteger chooseLanguage;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) LoginViewController* loginVC;
+@property (strong, nonatomic) MenuView *menuVC;
 
 @end

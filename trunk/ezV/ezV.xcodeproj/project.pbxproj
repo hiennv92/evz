@@ -121,6 +121,7 @@
 		34D1945B1747E5B800193599 /* ezV */ = {
 			isa = PBXGroup;
 			children = (
+				5F925FA4176304F7007E4DA7 /* Datalanguages */,
 				5FFDC88517614AA0007B19E0 /* IntroView */,
 				5FFDC88417614A89007B19E0 /* SettingView */,
 				5FFDC88317614A82007B19E0 /* TestView */,
@@ -130,8 +131,6 @@
 				34D1945C1747E5B800193599 /* Supporting Files */,
 				34D194641747E5B800193599 /* AppDelegate.h */,
 				34D194651747E5B800193599 /* AppDelegate.m */,
-				5FFDC8A51761A851007B19E0 /* GetDataLanguages.h */,
-				5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */,
 			);
 			path = ezV;
 			sourceTree = "<group>";
@@ -140,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				34D1945D1747E5B800193599 /* ezV-Info.plist */,
-				5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */,
 				34D1945E1747E5B800193599 /* InfoPlist.strings */,
 				34D194611747E5B800193599 /* main.m */,
 				34D194631747E5B800193599 /* ezV-Prefix.pch */,
@@ -149,6 +147,16 @@
 				34D1946B1747E5B800193599 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F925FA4176304F7007E4DA7 /* Datalanguages */ = {
+			isa = PBXGroup;
+			children = (
+				5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */,
+				5FFDC8A51761A851007B19E0 /* GetDataLanguages.h */,
+				5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */,
+			);
+			name = Datalanguages;
 			sourceTree = "<group>";
 		};
 		5FFDC88017614868007B19E0 /* MenuView */ = {

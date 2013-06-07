@@ -43,16 +43,68 @@
     else
         NSLog(@"VIETNAMESE");
     
+    
+    NSString *alertMenuTitle = [GetDataLanguages GetStringForKey:DATA_ALERTMENUTITLE_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *alertMenuMessage = [GetDataLanguages GetStringForKey:DATA_ALERTMENUMESS_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *alertMenuCancelButtonTitle = [GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *alertMenuStudyButtonTitle = [GetDataLanguages GetStringForKey:DATA_LEARN_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *alertMenuTestButtonTitle = [GetDataLanguages GetStringForKey:DATA_TEST_KEY andChooseLanguages:myApp.chooseLanguage];
+    
+    UIAlertView *alertMenu = [[UIAlertView alloc] initWithTitle:alertMenuTitle message:alertMenuMessage delegate:self cancelButtonTitle:alertMenuCancelButtonTitle otherButtonTitles:alertMenuStudyButtonTitle,alertMenuTestButtonTitle, nil];
+    
+    [alertMenu show];
+    alertMenu.tag = 1;
+    
     [self.learn.titleLabel setText: [GetDataLanguages GetStringForKey:DATA_LEARN_KEY andChooseLanguages:myApp.chooseLanguage]];
     [self.test.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_TEST_KEY andChooseLanguages:myApp.chooseLanguage]];
     [self.help.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_HELP_KEY andChooseLanguages:myApp.chooseLanguage]];
     [self.listOfCourses.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_COURSE_KEY andChooseLanguages:myApp.chooseLanguage]];
     [self.setting.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_SETTING_KEY andChooseLanguages:myApp.chooseLanguage]];
     
+    self.learn.hidden = YES;
+    self.test.hidden = YES;
+    self.help.hidden = YES;
+    self.setting.hidden = YES;
+    self.listOfCourses.hidden = YES;
+    
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSInteger alertag = alertView.tag;
+    if(alertag == 1){
+        if(buttonIndex == 1){
+            LearnViewController *learnVC;
+            if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad){
+                learnVC = [[LearnViewController alloc]initWithNibName:@"LearnViewController_ipad" bundle:[NSBundle mainBundle]];
+            }
+            else{
+                learnVC = [[LearnViewController alloc]initWithNibName:@"LearnViewController_iphone" bundle:[NSBundle mainBundle]];
+            }
+            [self presentModalViewController:learnVC animated:YES];
+        }
+        else if(buttonIndex == 2){
+            TestViewController *testVC;
+            if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad){
+                testVC = [[TestViewController alloc]initWithNibName:@"TestViewController_ipad" bundle:[NSBundle mainBundle]];
+            }
+            else{
+                testVC = [[TestViewController alloc]initWithNibName:@"TestViewController_iphone" bundle:[NSBundle mainBundle]];
+            }
+            [self presentModalViewController:testVC animated:YES];        }
+        else {
+            self.learn.hidden = NO;
+            self.test.hidden = NO;
+            self.help.hidden = NO;
+            self.setting.hidden = NO;
+            self.listOfCourses.hidden = NO;
+        }
+    }
+  
+}
+
 
 - (void)didReceiveMemoryWarning
 {

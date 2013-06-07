@@ -6,6 +6,12 @@
 	<dict/>
 	<key>English</key>
 	<dict>
+		<key>titlealertmenu</key>
+		<string>Alert</string>
+		<key>titlebuttoncancel</key>
+		<string>Cancel</string>
+		<key>alertmenumess</key>
+		<string>Do you want to learning VietNamese now?</string>
 		<key>password</key>
 		<string>Password</string>
 		<key>username</key>
@@ -29,6 +35,12 @@
 	<dict/>
 	<key>VietNamese</key>
 	<dict>
+		<key>titlealertmenu</key>
+		<string>Chu y</string>
+		<key>titlebuttoncancel</key>
+		<string>Huỷ</string>
+		<key>alertmenumess</key>
+		<string>Bạn có muốn hoc tiếng  Việt ngay không?</string>
 		<key>register</key>
 		<string>Đăng ký</string>
 		<key>login</key>

@@ -19,6 +19,8 @@
 #define DATA_REGISTER_KEY @"register"
 #define DATA_PASS_KEY @"password"
 #define DATA_USERNAME_KEY @"username"
-
+#define DATA_TITLECANCEL_KEY @"titlebuttoncancel"
+#define DATA_ALERTMENUMESS_KEY @"alertmenumess"
+#define DATA_ALERTMENUTITLE_KEY @"titlealertmenu"
 +(NSString *) GetStringForKey:(NSString *)key andChooseLanguages:(int) chooseLanguage;
 @end

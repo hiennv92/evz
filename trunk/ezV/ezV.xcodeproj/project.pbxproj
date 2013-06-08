@@ -19,6 +19,8 @@
 		34D194681747E5B800193599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194671747E5B800193599 /* Default.png */; };
 		34D1946A1747E5B800193599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194691747E5B800193599 /* Default@2x.png */; };
 		34D1946C1747E5B800193599 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D1946B1747E5B800193599 /* Default-568h@2x.png */; };
+		5FDE3028176385DB007F2A16 /* DataParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE3025176385DB007F2A16 /* DataParse.m */; };
+		5FDE3029176385DB007F2A16 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE3027176385DB007F2A16 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5FFDC87817613499007B19E0 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC87617613499007B19E0 /* MenuView.m */; };
 		5FFDC87D1761417A007B19E0 /* MenuView_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC87C1761417A007B19E0 /* MenuView_iphone.xib */; };
 		5FFDC87F176141A9007B19E0 /* MenuView_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC87E176141A9007B19E0 /* MenuView_ipad.xib */; };
@@ -54,6 +56,10 @@
 		34D194671747E5B800193599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		34D194691747E5B800193599 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		34D1946B1747E5B800193599 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5FDE3024176385DB007F2A16 /* DataParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParse.h; sourceTree = "<group>"; };
+		5FDE3025176385DB007F2A16 /* DataParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataParse.m; sourceTree = "<group>"; };
+		5FDE3026176385DB007F2A16 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		5FDE3027176385DB007F2A16 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		5FFDC87517613499007B19E0 /* MenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuView.h; sourceTree = "<group>"; };
 		5FFDC87617613499007B19E0 /* MenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuView.m; sourceTree = "<group>"; };
 		5FFDC87C1761417A007B19E0 /* MenuView_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuView_iphone.xib; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 		34D1945B1747E5B800193599 /* ezV */ = {
 			isa = PBXGroup;
 			children = (
+				5FDE3023176385B3007F2A16 /* Data parse */,
 				5F925FA4176304F7007E4DA7 /* Datalanguages */,
 				5FFDC88517614AA0007B19E0 /* IntroView */,
 				5FFDC88417614A89007B19E0 /* SettingView */,
@@ -157,6 +164,17 @@
 				5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */,
 			);
 			name = Datalanguages;
+			sourceTree = "<group>";
+		};
+		5FDE3023176385B3007F2A16 /* Data parse */ = {
+			isa = PBXGroup;
+			children = (
+				5FDE3024176385DB007F2A16 /* DataParse.h */,
+				5FDE3025176385DB007F2A16 /* DataParse.m */,
+				5FDE3026176385DB007F2A16 /* JSONKit.h */,
+				5FDE3027176385DB007F2A16 /* JSONKit.m */,
+			);
+			name = "Data parse";
 			sourceTree = "<group>";
 		};
 		5FFDC88017614868007B19E0 /* MenuView */ = {
@@ -308,6 +326,8 @@
 				5FFDC89817614B22007B19E0 /* IntroViewController.m in Sources */,
 				5FFDC89D17614B5F007B19E0 /* LearnViewController.m in Sources */,
 				5FFDC8A71761A851007B19E0 /* GetDataLanguages.m in Sources */,
+				5FDE3028176385DB007F2A16 /* DataParse.m in Sources */,
+				5FDE3029176385DB007F2A16 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

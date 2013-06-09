@@ -7,6 +7,7 @@
 //
 
 #import "TestViewController.h"
+#import "MenuView.h"
 
 @interface TestViewController ()
 
@@ -33,6 +34,16 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)backAction:(id)sender {
+    MenuView *menuView;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        menuView = [[MenuView alloc] initWithNibName:@"MenuView_ipad" bundle:[NSBundle mainBundle]];
+    }
+    else{
+        menuView = [[MenuView alloc] initWithNibName:@"MenuView_iphone" bundle:[NSBundle mainBundle]];
+    }
+    [self presentModalViewController:menuView animated:YES];
 }
 
 @end

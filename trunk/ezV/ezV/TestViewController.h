@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TestViewController : UIViewController
+- (IBAction)backAction:(id)sender;
 
 @end

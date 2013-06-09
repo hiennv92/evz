@@ -12,6 +12,7 @@
 @synthesize chooseLanguage = _chooseLanguage;
 @synthesize userName = _userName;
 @synthesize pass = _pass;
+@synthesize theFirst = _theFirst;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -28,6 +29,7 @@
 //
     //Default language is English
     self.chooseLanguage = 1;
+    self.theFirst = YES;
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.menuVC = [[MenuView alloc] initWithNibName:@"MenuView_ipad" bundle:[NSBundle mainBundle]];

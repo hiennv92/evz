@@ -17,5 +17,6 @@
 @property (strong, nonatomic) MenuView *menuVC;
 @property (assign, nonatomic) NSString *userName;
 @property (assign, nonatomic) NSString *pass;
+@property (assign, nonatomic) BOOL theFirst;
 
 @end

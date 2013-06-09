@@ -55,6 +55,8 @@
     self.labelPass.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELPASS andChooseLanguages:myApp.chooseLanguage];
     self.lbRepass.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELREPASS andChooseLanguages:myApp.chooseLanguage];
     self.labelEmail.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELEMAIL andChooseLanguages:myApp.chooseLanguage];
+    self.buttonDone.title = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_BUTTONDONE andChooseLanguages:myApp.chooseLanguage];
+    self.buttonCancel.title = [GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage];
     
     
     //Bien lua chon hien thi thay doi noi dung cac button trong view add group;

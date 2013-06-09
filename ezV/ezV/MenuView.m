@@ -45,8 +45,14 @@
     NSString *alertMenuTestButtonTitle = [GetDataLanguages GetStringForKey:DATA_TEST_KEY andChooseLanguages:myApp.chooseLanguage];
     
     UIAlertView *alertMenu = [[UIAlertView alloc] initWithTitle:alertMenuTitle message:alertMenuMessage delegate:self cancelButtonTitle:alertMenuCancelButtonTitle otherButtonTitles:alertMenuStudyButtonTitle,alertMenuTestButtonTitle, nil];
+    if(myApp.theFirst){
+        [alertMenu show];
+        [self hiddenButton];
+    }
+    else
+        [self showButton];
     
-    [alertMenu show];
+    
     alertMenu.tag = MENU_ALERT_TAG;
     [self MakeLoginView];
     
@@ -56,7 +62,6 @@
     [self.listOfCourses.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_COURSE_KEY andChooseLanguages:myApp.chooseLanguage]];
     [self.setting.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_SETTING_KEY andChooseLanguages:myApp.chooseLanguage]];
     
-    [self hiddenButton];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.    
@@ -321,6 +326,7 @@
         }
         else if(buttonIndex == 0){
             [self showButton];
+            myApp.theFirst = NO;
         }
     }
     else if(alertTag == LOGIN_LOGIN_RESULT_FAIL_TAG){

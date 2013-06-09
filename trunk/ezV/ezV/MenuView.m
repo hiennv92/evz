@@ -7,11 +7,7 @@
 //
 
 #import "MenuView.h"
-#import "LoginViewController.h"
-#import "LearnViewController.h"
-#import "TestViewController.h"
 #import "AppDelegate.h"
-#import "GetDataLanguages.h"
 
 @interface MenuView (){
     AppDelegate *myApp;
@@ -78,45 +74,183 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)MakeLoginView{
-    NSString *stringTitle = [GetDataLanguages GetStringForKey:DATA_ALERTLOGINTITLE_KEY andChooseLanguages:myApp.chooseLanguage];
-    NSString *stringMess = [GetDataLanguages GetStringForKey:DATA_ALERTLOGINMESS_KEY andChooseLanguages:myApp.chooseLanguage];
-    NSString *stringButton1  = [GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage];
-    NSString *stringButton2 = [GetDataLanguages GetStringForKey:DATA_LOGIN_KEY andChooseLanguages:myApp.chooseLanguage];
-    NSString *stringButton3 = [GetDataLanguages GetStringForKey:DATA_REGISTER_KEY andChooseLanguages:myApp.chooseLanguage];
-    
-    loginAlertView = [[UIAlertView alloc] initWithTitle:stringTitle
-                                                message:stringMess
-                                               delegate:self
-                                      cancelButtonTitle:stringButton1
-                                      otherButtonTitles:stringButton2,stringButton3, nil];
-    [loginAlertView setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
-    
-    loginAlertView.tag = LOGIN_LOGIN_ALERT_TAG;
+-(void) MakeLoginView
+{
+	if(lblPass == nil)
+	{
+		lblPass = [[UILabel alloc] init];
+		[lblPass setBackgroundColor:[UIColor clearColor]];
+		[lblPass setTextColor:[UIColor whiteColor]];
+		[lblPass setText:[GetDataLanguages GetStringForKey:DATA_PASS_KEY andChooseLanguages:myApp.chooseLanguage]];
+		[lblPass setFrame:F_LOGIN_LBL_PASS];
+	}
+	if(lblRemember == nil)
+	{
+		lblRemember = [[UILabel alloc] init];
+		[lblRemember setBackgroundColor:[UIColor clearColor]];
+		[lblRemember setTextColor:[UIColor whiteColor]];
+		[lblRemember setText:[GetDataLanguages GetStringForKey:DATA_REMEMBERLABEL_KEY andChooseLanguages:myApp.chooseLanguage]];
+		[lblRemember setFrame:F_LOGIN_LBL_REMEMBER];
+	}
+	if(lblName == nil)
+	{
+		lblName = [[UILabel alloc] init];
+		[lblName setBackgroundColor:[UIColor clearColor]];
+		[lblName setTextColor:[UIColor whiteColor]];
+		[lblName setText:[GetDataLanguages GetStringForKey:DATA_USERNAME_KEY andChooseLanguages:myApp.chooseLanguage]];
+		[lblName setFrame:F_LOGIN_LBL_NAME];
+	}
+	if(btnRemember==nil)
+	{
+		btnRemember = [[UIButton alloc] init];
+		[btnRemember setFrame:F_LOGIN_REMEMBER_BUTTON];
+		if([SettingManager GetAllowRememberAccountPermition])
+			[btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_CHECKED] forState:0];
+		else
+			[btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_UNCHECKED] forState:0];
+		[btnRemember addTarget:self action:@selector(OnLoginButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+	}
+	if(txtfName == nil)
+	{
+		txtfName = [[UITextField alloc] init];
+		[txtfName setBorderStyle:UITextBorderStyleRoundedRect];
+		[txtfName setTextAlignment:UITextAlignmentCenter];
+		txtfName.placeholder = [GetDataLanguages GetStringForKey:DATA_USERNAME_KEY andChooseLanguages:myApp.chooseLanguage];
+		txtfName.returnKeyType = UIReturnKeyDone;
+		txtfName.delegate = self;
+		[txtfName setFrame:F_LOGIN_TXTF_NAME];
+	}
+	if(txtfPass == nil)
+	{
+		txtfPass = [[UITextField alloc] init];
+		[txtfPass setBorderStyle:UITextBorderStyleRoundedRect];
+		[txtfPass setTextAlignment:UITextAlignmentCenter];
+		txtfPass.placeholder = [GetDataLanguages GetStringForKey:DATA_PASS_KEY andChooseLanguages:myApp.chooseLanguage];
+		txtfPass.returnKeyType = UIReturnKeyDone;
+		txtfPass.secureTextEntry = TRUE;
+		txtfPass.delegate = self;
+		[txtfPass setFrame:F_LOGIN_TXTF_PASS];
+	}
+		
+	[lblName removeFromSuperview];
+	[lblPass removeFromSuperview];
+	[lblRemember removeFromSuperview];
+	[txtfName removeFromSuperview];
+	[txtfPass removeFromSuperview];
+	[btnRemember removeFromSuperview];
+	
+	loginAlertView = [[UIAlertView alloc] initWithTitle:[GetDataLanguages GetStringForKey:DATA_ALERTLOGINTITLE_KEY andChooseLanguages:myApp.chooseLanguage]
+                                            message:nil
+                                            delegate:self
+                                            cancelButtonTitle:[GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage]
+                                            otherButtonTitles:[GetDataLanguages GetStringForKey:DATA_LOGIN_KEY andChooseLanguages:myApp.chooseLanguage],[GetDataLanguages GetStringForKey:DATA_REGISTER_KEY andChooseLanguages:myApp.chooseLanguage],nil];
+	loginAlertView.tag = LOGIN_LOGIN_ALERT_TAG;
+	[loginAlertView addSubview:lblName];
+	[loginAlertView addSubview:txtfName];
+	[loginAlertView addSubview:lblPass];
+	[loginAlertView addSubview:txtfPass];
+	[loginAlertView addSubview:btnRemember];
+	[loginAlertView addSubview:lblRemember];
 }
+
+-(void) OnLoginButtonClicked:(UIButton *)sender
+{
+	if(isWaitResponse) return;
+    if(sender == btnRemember)
+	{
+        if([SettingManager GetAllowRememberAccountPermition])
+        {
+            [SettingManager SaveAllowRememberAccuntPermittion:FALSE];
+            [btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_UNCHECKED] forState:0];
+        }
+        else
+        {
+            [SettingManager SaveAllowRememberAccuntPermittion:TRUE];
+            [btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_CHECKED] forState:0];
+        }
+    }
+}
+
+#pragma mark UIAlertView delegate
+-(void) willPresentAlertView:(UIAlertView *)alertView
+{
+    if(alertView.tag == LOGIN_LOGIN_ALERT_TAG)
+    {
+        [alertView setFrame:F_LOGIN_ALERT];
+		
+        float ver = [[[UIDevice currentDevice] systemVersion] floatValue];
+        NSLog(@"OS Version:  %f",ver);
+        if(ver  < 5.0)
+        {
+            int i=0;
+            
+            for(UIView *v in alertView.subviews)
+            {
+                NSLog(@"CheckButton in alert: %@",[v class]);
+                NSString *class = [NSString stringWithFormat:@"%@",[v class]];
+                if([class isEqualToString:@"UIThreePartButton"])
+                {
+                    i++;
+                    if(i==1)
+                        [v setFrame:F_LOGIN_CLOSE_BUTTON];
+                    else if(i==2)
+                        [v setFrame:F_LOGIN_LOGIN_BUTTON];
+                    else if(i==3)
+                        [v setFrame:F_LOGIN_REGISTER_BUTTON];
+                }
+            }
+        }
+        else
+        {
+            int i=0;
+            for(UIView *v in alertView.subviews)
+            {
+                if([v isKindOfClass:[UIButton class]])
+                {
+                    if(i==0)
+                        [v setFrame:F_LOGIN_CLOSE_BUTTON];
+                    else if(i==1)
+                        [v setFrame:F_LOGIN_LOGIN_BUTTON];
+                    else if(i==2)
+                        [v setFrame:F_LOGIN_REGISTER_BUTTON];
+                    i++;
+                }
+            }
+        }
+        
+        //        if(myApp.userName == NULL){
+        //            [alertView textFieldAtIndex:0].text = @"lampsea";
+        //            [alertView textFieldAtIndex:1].text = @"123456";
+        //        }
+        //        else{
+        //            [alertView textFieldAtIndex:0].text = myApp.userName;
+        //            [alertView textFieldAtIndex:1].text = myApp.pass;
+    }
+}
+
 
 //Cac lua chon cho AlertView cua tung muc
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSInteger alertTag = alertView.tag;
     //Xoá thể loại trên bảng các thể loại thu chi
     if(alertTag == LOGIN_LOGIN_ALERT_TAG){
-        if(buttonIndex == 0){
+        if(buttonIndex == 1){
             int test1 = 0;
             int test2 = 0;
             
-            for(int i = 0;i<[[alertView textFieldAtIndex:0].text length];i++){
-                if([[alertView textFieldAtIndex:0].text characterAtIndex:i] == ' '){
+            for(int i = 0;i<[txtfName.text length];i++){
+                if([txtfName.text characterAtIndex:i] == ' '){
                     test1 ++;
                 }
             }
             
-            for(int i = 0;i<[[alertView textFieldAtIndex:1].text length];i++){
-                if([[alertView textFieldAtIndex:1].text characterAtIndex:i] == ' '){
+            for(int i = 0;i<[txtfPass.text length];i++){
+                if([txtfPass.text characterAtIndex:i] == ' '){
                     test2 ++;
                 }
             }
-            //Truong hop field khoan thu hoac field so tien bi bo trong thi se hien ra thong bao
-            if([alertView textFieldAtIndex:0].text == nil||test1 == [[alertView textFieldAtIndex:0].text length]||[alertView textFieldAtIndex:1].text == nil || test2 == [[alertView textFieldAtIndex:1].text length]){
+            
+            if(txtfName.text == nil||test1 == [txtfName.text length]||txtfPass.text == nil || test2 == [txtfPass.text length]){
                 NSLog(@"Nhap thieu du lieu:");
                 UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Lỗi đăng nhập"
                                                                  message:@"Xin hãy điền đầy đủ thông tin tài khoản!"
@@ -132,16 +266,16 @@
                 indicatorTimeCountDown = LOGIN_INDICATOR_SHOW_TIME;
                 indicatorTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(IndicatorTimeCountDown) userInfo:nil repeats:YES];
                 
-                NSLog(@"User Name send: %@",[alertView textFieldAtIndex:0].text);
-                NSLog(@"Pass send: %@",[alertView textFieldAtIndex:1].text);
+                NSLog(@"User Name send: %@",txtfName.text);
+                NSLog(@"Pass send: %@",txtfPass.text);
 //                DataParse *tmp = [[DataParse alloc]init];
 //                NSString *stringJson = [tmp setDataSignInToJson:[alertView textFieldAtIndex:0].text andPass:[alertView textFieldAtIndex:1].text];
 //                [self checkLogIn:stringJson];
             }
         }
-        else{
-//            RegisterView *registerView = [[RegisterView alloc]initWithNibName:@"RegisterView" bundle:nil];
-//            [self presentModalViewController:registerView animated:YES];
+        else if(buttonIndex == 2){
+            RegisterView *registerView = [[RegisterView alloc]initWithNibName:@"RegisterView" bundle:nil];
+            [self presentModalViewController:registerView animated:YES];
         }
     }
     else if(alertTag == LOGIN_LOGIN_RESULT_FAIL_TAG){
@@ -206,7 +340,6 @@
     }
     [self presentModalViewController:testVC animated:YES];
 }
-
 
 - (IBAction)buttonAddNewCourse:(id)sender {
     NSLog(@"Choose add new course");
@@ -284,7 +417,6 @@
 		}
 	}
 }
-
 
 - (void)viewDidUnload {
     [self setLearn:nil];

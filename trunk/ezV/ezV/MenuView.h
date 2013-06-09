@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginLayout.h"
+#import "SettingManager.h"
+#import "RegisterView.h"
+#import "LoginViewController.h"
+#import "LearnViewController.h"
+#import "TestViewController.h"
+#import "GetDataLanguages.h"
 
 #define LOGIN_INDICATOR_SHOW_TIME 60
 #define LOGIN_REGIST_ALERT_TAG 1
@@ -19,9 +26,13 @@
 #define LOGIN_REGIST_RESUTL_FAIL_TAG 7
 #define LOGIN_LOGIN_RESULT_FAIL_TAG 8
 
-@interface MenuView : UIViewController{
+@interface MenuView : UIViewController<UITextFieldDelegate>{
     NSMutableArray *dataUsers;
     UIAlertView *loginAlertView;
+    UIButton *btnRemember,*btnLogin,*btnCancel,*btnRegister;
+	UILabel *lblName,*lblPass,*lblRemember,*lblLogin;
+	UITextField *txtfName,*txtfPass;
+    
     id appDelegate;
     id owner;
     BOOL isWaitResponse,isShow,onCreateIndicator;

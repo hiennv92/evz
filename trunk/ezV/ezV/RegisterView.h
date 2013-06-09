@@ -11,24 +11,25 @@
 
 @interface RegisterView : UIViewController<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate,NSXMLParserDelegate,NSURLConnectionDelegate>{
     int switchButton;
-    int switchDataParser;
 }
 
 - (IBAction)buttonFinish:(id)sender;
 - (IBAction)buttonCancel:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *lbTitle;
+@property (strong, nonatomic) IBOutlet UILabel *lbName;
+@property (strong, nonatomic) IBOutlet UILabel *lbUserName;
+@property (strong, nonatomic) IBOutlet UILabel *labelPass;
+@property (strong, nonatomic) IBOutlet UILabel *lbRepass;
+@property (strong, nonatomic) IBOutlet UILabel *labelEmail;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonCancel;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonDone;
 
 @property (strong, nonatomic) IBOutlet UITextField *fieldName;
 @property (strong, nonatomic) IBOutlet UITextField *fieldNameSignin;
 @property (strong, nonatomic) IBOutlet UITextField *fieldPass;
 @property (strong, nonatomic) IBOutlet UITextField *fieldRepass;
 @property (strong, nonatomic) IBOutlet UITextField *fieldEmail;
-
 @property (strong, nonatomic) IBOutlet UIView *signForm;
 
-@property (retain, nonatomic) NSMutableData *webData;
-@property (retain, nonatomic) NSXMLParser *xmlParser;
-@property (retain, nonatomic) NSMutableString *nodeContent;
-@property (retain, nonatomic) NSString *finaldata;
-@property (nonatomic, retain) NSString *stringGroups;
 
 @end

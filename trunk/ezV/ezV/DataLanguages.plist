@@ -6,7 +6,19 @@
 	<dict/>
 	<key>English</key>
 	<dict>
-		<key>registerview_label</key>
+		<key>registerview_labelemail</key>
+		<string>Email</string>
+		<key>registerview_buttondone</key>
+		<string>Finish</string>
+		<key>registerview_labelrepass</key>
+		<string>Repeat password</string>
+		<key>registerview_labelpass</key>
+		<string>Password</string>
+		<key>registerview_labelusername</key>
+		<string>User name</string>
+		<key>registerview_labelname</key>
+		<string>Full name</string>
+		<key>registerview_title</key>
 		<string>Regist an account ezV</string>
 		<key>rememberlabel</key>
 		<string>Remember</string>

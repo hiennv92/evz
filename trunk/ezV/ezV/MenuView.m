@@ -12,7 +12,6 @@
 @interface MenuView (){
     AppDelegate *myApp;
 }
-
 @end
 
 @implementation MenuView
@@ -57,16 +56,48 @@
     [self.listOfCourses.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_COURSE_KEY andChooseLanguages:myApp.chooseLanguage]];
     [self.setting.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_SETTING_KEY andChooseLanguages:myApp.chooseLanguage]];
     
-    self.learn.hidden = YES;
-    self.test.hidden = YES;
-    self.help.hidden = YES;
-    self.setting.hidden = YES;
-    self.listOfCourses.hidden = YES;
+    [self hiddenButton];
     
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view from its nib.    
 }
 
+////////TESTWEBSERVICES///////////////////////
+-(void)getDataTest:(NSString*) stringUsername andPass:(NSString*) stringPass{
+    NSString *stringURL = [NSString stringWithFormat:@"http://easyvietnamese.com/ws/login?name=%@&pass=%@",stringUsername,stringPass];
+    
+    NSURL *urltest = [NSURL URLWithString:stringURL];
+
+    ////////TEST WEBSERVICES///////////////////
+    dispatch_async(kBgQueue, ^{
+        NSData* data = [NSData dataWithContentsOfURL:
+                        urltest];
+        [self performSelectorOnMainThread:@selector(fetchedData:)
+                               withObject:data waitUntilDone:YES];
+    });
+    //////////////TEST WEBSERVICES////////////
+}
+- (void)fetchedData:(NSData *)responseData {
+    [self StopIndicator];
+    [self StopIndicatorTimer];
+    //parse out the json data
+    NSError* error;
+    NSDictionary* json = [NSJSONSerialization
+                          JSONObjectWithData:responseData //1
+                          
+                          options:kNilOptions
+                          error:&error];
+    
+    NSArray *arrayMess = [json objectForKey:@"msg"]; //2
+    NSArray *arrayResult = [json objectForKey:@"result"];
+    NSArray *arraySID = [json objectForKey:@"sid"];
+//    NSDictionary *mess = [arrayMess objectAtIndex:0];
+//    NSDictionary *result = [arryResult objectAtIndex:0];
+    
+    NSLog(@"Mess: %@",arrayMess);
+    NSLog(@"result: %@", arrayResult);
+    NSLog(@"Sid: %@", arraySID);
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -145,6 +176,9 @@
                                             cancelButtonTitle:[GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage]
                                             otherButtonTitles:[GetDataLanguages GetStringForKey:DATA_LOGIN_KEY andChooseLanguages:myApp.chooseLanguage],[GetDataLanguages GetStringForKey:DATA_REGISTER_KEY andChooseLanguages:myApp.chooseLanguage],nil];
 	loginAlertView.tag = LOGIN_LOGIN_ALERT_TAG;
+    txtfName.tag = 1;
+    txtfPass.tag = 2;
+    
 	[loginAlertView addSubview:lblName];
 	[loginAlertView addSubview:txtfName];
 	[loginAlertView addSubview:lblPass];
@@ -169,6 +203,11 @@
             [btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_CHECKED] forState:0];
         }
     }
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 #pragma mark UIAlertView delegate
@@ -218,13 +257,14 @@
             }
         }
         
-        //        if(myApp.userName == NULL){
-        //            [alertView textFieldAtIndex:0].text = @"lampsea";
-        //            [alertView textFieldAtIndex:1].text = @"123456";
-        //        }
-        //        else{
-        //            [alertView textFieldAtIndex:0].text = myApp.userName;
-        //            [alertView textFieldAtIndex:1].text = myApp.pass;
+        if(myApp.userName == NULL){
+            txtfName.text = @"lampsea";
+            txtfPass.text = @"123456";
+        }
+        else{
+            txtfName.text = myApp.userName;
+            txtfPass.text = myApp.pass;
+        }
     }
 }
 
@@ -268,14 +308,19 @@
                 
                 NSLog(@"User Name send: %@",txtfName.text);
                 NSLog(@"Pass send: %@",txtfPass.text);
-//                DataParse *tmp = [[DataParse alloc]init];
-//                NSString *stringJson = [tmp setDataSignInToJson:[alertView textFieldAtIndex:0].text andPass:[alertView textFieldAtIndex:1].text];
+                DataParse *tmp = [[DataParse alloc]init];
+//                NSString *stringJson = [tmp setDataSignInToJson:txtfName.text andPass:txtfPass.text];
 //                [self checkLogIn:stringJson];
+                [self hiddenButton];
+                [self getDataTest:txtfName.text andPass: txtfPass.text];
             }
         }
         else if(buttonIndex == 2){
             RegisterView *registerView = [[RegisterView alloc]initWithNibName:@"RegisterView" bundle:nil];
             [self presentModalViewController:registerView animated:YES];
+        }
+        else if(buttonIndex == 0){
+            [self showButton];
         }
     }
     else if(alertTag == LOGIN_LOGIN_RESULT_FAIL_TAG){
@@ -308,11 +353,7 @@
             }
             [self presentModalViewController:testVC animated:YES];        }
         else {
-            self.learn.hidden = NO;
-            self.test.hidden = NO;
-            self.help.hidden = NO;
-            self.setting.hidden = NO;
-            self.listOfCourses.hidden = NO;
+            [self showButton];
         }
     }
 }
@@ -344,6 +385,7 @@
 - (IBAction)buttonAddNewCourse:(id)sender {
     NSLog(@"Choose add new course");
     [loginAlertView show];
+    [self hiddenButton];
 //    LoginViewController *loginVC;
 //    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
 //        loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController_ipad" bundle:[NSBundle mainBundle]];
@@ -418,6 +460,20 @@
 	}
 }
 
+-(void)hiddenButton{
+    self.learn.hidden = YES;
+    self.test.hidden = YES;
+    self.help.hidden = YES;
+    self.setting.hidden = YES;
+    self.listOfCourses.hidden = YES;
+}
+-(void)showButton{
+    self.learn.hidden = NO;
+    self.test.hidden = NO;
+    self.help.hidden = NO;
+    self.setting.hidden = NO;
+    self.listOfCourses.hidden = NO;
+}
 - (void)viewDidUnload {
     [self setLearn:nil];
     [self setTest:nil];

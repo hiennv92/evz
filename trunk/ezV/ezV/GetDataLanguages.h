@@ -22,5 +22,7 @@
 #define DATA_TITLECANCEL_KEY @"titlebuttoncancel"
 #define DATA_ALERTMENUMESS_KEY @"alertmenumess"
 #define DATA_ALERTMENUTITLE_KEY @"titlealertmenu"
+#define DATA_ALERTLOGINTITLE_KEY @"titlealertlogin"
+#define DATA_ALERTLOGINMESS_KEY @"messalertlogin"
 +(NSString *) GetStringForKey:(NSString *)key andChooseLanguages:(int) chooseLanguage;
 @end

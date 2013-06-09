@@ -6,6 +6,10 @@
 	<dict/>
 	<key>English</key>
 	<dict>
+		<key>messalertlogin</key>
+		<string>Login to learn more</string>
+		<key>titlealertlogin</key>
+		<string>Login</string>
 		<key>titlealertmenu</key>
 		<string>Alert</string>
 		<key>titlebuttoncancel</key>
@@ -35,6 +39,10 @@
 	<dict/>
 	<key>VietNamese</key>
 	<dict>
+		<key>titlealertlogin</key>
+		<string></string>
+		<key>messalertlogin</key>
+		<string></string>
 		<key>titlealertmenu</key>
 		<string>Chu y</string>
 		<key>titlebuttoncancel</key>

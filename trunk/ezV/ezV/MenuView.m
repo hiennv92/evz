@@ -79,11 +79,17 @@
 }
 
 -(void)MakeLoginView{
-    loginAlertView = [[UIAlertView alloc] initWithTitle:@"Đăng nhập"
-                                                message:@"Nhập thông tin tài khoản của ban"
+    NSString *stringTitle = [GetDataLanguages GetStringForKey:DATA_ALERTLOGINTITLE_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *stringMess = [GetDataLanguages GetStringForKey:DATA_ALERTLOGINMESS_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *stringButton1  = [GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *stringButton2 = [GetDataLanguages GetStringForKey:DATA_LOGIN_KEY andChooseLanguages:myApp.chooseLanguage];
+    NSString *stringButton3 = [GetDataLanguages GetStringForKey:DATA_REGISTER_KEY andChooseLanguages:myApp.chooseLanguage];
+    
+    loginAlertView = [[UIAlertView alloc] initWithTitle:stringTitle
+                                                message:stringMess
                                                delegate:self
-                                      cancelButtonTitle:@"Đăng nhập"
-                                      otherButtonTitles:@"Đăng ký", nil];
+                                      cancelButtonTitle:stringButton1
+                                      otherButtonTitles:stringButton2,stringButton3, nil];
     [loginAlertView setAlertViewStyle:UIAlertViewStyleLoginAndPasswordInput];
     
     loginAlertView.tag = LOGIN_LOGIN_ALERT_TAG;

@@ -10,6 +10,8 @@
 
 @implementation AppDelegate
 @synthesize chooseLanguage = _chooseLanguage;
+@synthesize userName = _userName;
+@synthesize pass = _pass;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

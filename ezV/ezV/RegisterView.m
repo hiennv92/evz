@@ -23,11 +23,6 @@
 @synthesize fieldEmail;
 @synthesize fieldRepass;
 @synthesize fieldNameSignin;
-@synthesize xmlParser;
-@synthesize finaldata;
-@synthesize webData;
-@synthesize nodeContent;
-@synthesize stringGroups;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,7 +43,20 @@
     fieldPass.tag = 3;
     fieldRepass.tag = 4;
     fieldEmail.tag = 5;
-
+    
+    fieldName.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELNAME andChooseLanguages:myApp.chooseLanguage];
+    fieldNameSignin.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELUSERNAME andChooseLanguages:myApp.chooseLanguage];
+    fieldPass.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELPASS andChooseLanguages:myApp.chooseLanguage];
+    fieldRepass.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELREPASS andChooseLanguages:myApp.chooseLanguage];
+    fieldEmail.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELEMAIL andChooseLanguages:myApp.chooseLanguage];
+    self.lbTitle.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_TITLE andChooseLanguages:myApp.chooseLanguage];
+    self.lbName.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELNAME andChooseLanguages:myApp.chooseLanguage];
+    self.lbUserName.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELUSERNAME andChooseLanguages:myApp.chooseLanguage];
+    self.labelPass.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELPASS andChooseLanguages:myApp.chooseLanguage];
+    self.lbRepass.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELREPASS andChooseLanguages:myApp.chooseLanguage];
+    self.labelEmail.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELEMAIL andChooseLanguages:myApp.chooseLanguage];
+    
+    
     //Bien lua chon hien thi thay doi noi dung cac button trong view add group;
     switchButton = 1;
 
@@ -192,6 +200,14 @@
     [self setFieldRepass:nil];
     [self setFieldEmail:nil];
     [self setSignForm:nil];
+    [self setLbTitle:nil];
+    [self setLbName:nil];
+    [self setLbUserName:nil];
+    [self setLabelPass:nil];
+    [self setLbRepass:nil];
+    [self setLabelEmail:nil];
+    [self setButtonCancel:nil];
+    [self setButtonDone:nil];
     [super viewDidUnload];
 }
 

@@ -42,3 +42,7 @@
 #define F_LOGIN_TXTF_REG_NAME CGRectMake(20, 105, 250, 30)
 #define F_LOGIN_TXTF_REG_PASS1 CGRectMake(20, 155, 250, 30)
 #define F_LOGIN_TXTF_REG_PASS2 CGRectMake(20, 205, 250, 30)
+
+
+///TEST WEBSERVICES///
+#define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1

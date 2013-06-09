@@ -15,7 +15,7 @@
 #import "TestViewController.h"
 #import "GetDataLanguages.h"
 
-#define LOGIN_INDICATOR_SHOW_TIME 60
+#define LOGIN_INDICATOR_SHOW_TIME 30
 #define LOGIN_REGIST_ALERT_TAG 1
 #define LOGIN_LOGIN_ALERT_TAG 3
 #define LOGIN_REGIST_ALERT_REMIND_TAG 2
@@ -26,7 +26,8 @@
 #define LOGIN_REGIST_RESUTL_FAIL_TAG 7
 #define LOGIN_LOGIN_RESULT_FAIL_TAG 8
 
-@interface MenuView : UIViewController<UITextFieldDelegate>{
+
+@interface MenuView : UIViewController<UITextFieldDelegate, UIAlertViewDelegate>{
     NSMutableArray *dataUsers;
     UIAlertView *loginAlertView;
     UIButton *btnRemember,*btnLogin,*btnCancel,*btnRegister;

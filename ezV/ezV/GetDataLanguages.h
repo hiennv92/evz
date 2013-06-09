@@ -25,5 +25,14 @@
 #define DATA_ALERTLOGINTITLE_KEY @"titlealertlogin"
 #define DATA_ALERTLOGINMESS_KEY @"messalertlogin"
 #define DATA_REMEMBERLABEL_KEY @"rememberlabel"
+
+#define DATA_REGISTERVIEW_BUTTONDONE @"registerview_buttondone"
+#define DATA_REGISTERVIEW_LABELNAME @"registerview_labelname"
+#define DATA_REGISTERVIEW_LABELUSERNAME @"registerview_labelusername"
+#define DATA_REGISTERVIEW_LABELPASS @"registerview_labelpass"
+#define DATA_REGISTERVIEW_LABELREPASS @"registerview_labelrepass"
+#define DATA_REGISTERVIEW_LABELEMAIL @"registerview_labelemail"
+#define DATA_REGISTERVIEW_TITLE @"registerview_title"
+
 +(NSString *) GetStringForKey:(NSString *)key andChooseLanguages:(int) chooseLanguage;
 @end

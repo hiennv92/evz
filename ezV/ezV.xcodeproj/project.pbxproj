@@ -19,6 +19,11 @@
 		34D194681747E5B800193599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194671747E5B800193599 /* Default.png */; };
 		34D1946A1747E5B800193599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194691747E5B800193599 /* Default@2x.png */; };
 		34D1946C1747E5B800193599 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D1946B1747E5B800193599 /* Default-568h@2x.png */; };
+		5F8F78EB17640D68006820B4 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F78E917640D68006820B4 /* RegisterView.m */; };
+		5F8F78EC17640D68006820B4 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F8F78EA17640D68006820B4 /* RegisterView.xib */; };
+		5F972DBE1764066400412211 /* SettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F972DBD1764066400412211 /* SettingManager.m */; };
+		5F972DC11764091D00412211 /* checkbox-checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F972DBF1764091D00412211 /* checkbox-checked.png */; };
+		5F972DC21764091D00412211 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F972DC01764091D00412211 /* checkbox.png */; };
 		5FDE3028176385DB007F2A16 /* DataParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE3025176385DB007F2A16 /* DataParse.m */; };
 		5FDE3029176385DB007F2A16 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDE3027176385DB007F2A16 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5FFDC87817613499007B19E0 /* MenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC87617613499007B19E0 /* MenuView.m */; };
@@ -56,6 +61,14 @@
 		34D194671747E5B800193599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		34D194691747E5B800193599 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		34D1946B1747E5B800193599 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5F8F78E817640D68006820B4 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
+		5F8F78E917640D68006820B4 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		5F8F78EA17640D68006820B4 /* RegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
+		5F972DBB1763F4DF00412211 /* LoginLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLayout.h; sourceTree = "<group>"; };
+		5F972DBC1764066400412211 /* SettingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingManager.h; sourceTree = "<group>"; };
+		5F972DBD1764066400412211 /* SettingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingManager.m; sourceTree = "<group>"; };
+		5F972DBF1764091D00412211 /* checkbox-checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-checked.png"; sourceTree = "<group>"; };
+		5F972DC01764091D00412211 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
 		5FDE3024176385DB007F2A16 /* DataParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataParse.h; sourceTree = "<group>"; };
 		5FDE3025176385DB007F2A16 /* DataParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataParse.m; sourceTree = "<group>"; };
 		5FDE3026176385DB007F2A16 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
@@ -127,6 +140,7 @@
 		34D1945B1747E5B800193599 /* ezV */ = {
 			isa = PBXGroup;
 			children = (
+				5F972DBA1763F4B700412211 /* Layout */,
 				5FDE3023176385B3007F2A16 /* Data parse */,
 				5F925FA4176304F7007E4DA7 /* Datalanguages */,
 				5FFDC88517614AA0007B19E0 /* IntroView */,
@@ -137,6 +151,8 @@
 				5FFDC88017614868007B19E0 /* MenuView */,
 				34D1945C1747E5B800193599 /* Supporting Files */,
 				34D194641747E5B800193599 /* AppDelegate.h */,
+				5F972DBC1764066400412211 /* SettingManager.h */,
+				5F972DBD1764066400412211 /* SettingManager.m */,
 				34D194651747E5B800193599 /* AppDelegate.m */,
 			);
 			path = ezV;
@@ -145,6 +161,8 @@
 		34D1945C1747E5B800193599 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5F972DBF1764091D00412211 /* checkbox-checked.png */,
+				5F972DC01764091D00412211 /* checkbox.png */,
 				34D1945D1747E5B800193599 /* ezV-Info.plist */,
 				34D1945E1747E5B800193599 /* InfoPlist.strings */,
 				34D194611747E5B800193599 /* main.m */,
@@ -164,6 +182,14 @@
 				5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */,
 			);
 			name = Datalanguages;
+			sourceTree = "<group>";
+		};
+		5F972DBA1763F4B700412211 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				5F972DBB1763F4DF00412211 /* LoginLayout.h */,
+			);
+			name = Layout;
 			sourceTree = "<group>";
 		};
 		5FDE3023176385B3007F2A16 /* Data parse */ = {
@@ -191,6 +217,9 @@
 		5FFDC8811761487C007B19E0 /* LoginView */ = {
 			isa = PBXGroup;
 			children = (
+				5F8F78E817640D68006820B4 /* RegisterView.h */,
+				5F8F78E917640D68006820B4 /* RegisterView.m */,
+				5F8F78EA17640D68006820B4 /* RegisterView.xib */,
 				34647F5F1748323C00171D12 /* LoginViewController.h */,
 				34647F601748323C00171D12 /* LoginViewController.m */,
 				34647F611748323C00171D12 /* LoginViewController_ipad.xib */,
@@ -307,6 +336,9 @@
 				5FFDC8A017614B75007B19E0 /* LearnViewController_iphone.xib in Resources */,
 				5FFDC8A217614BF0007B19E0 /* TestViewController_iphone.xib in Resources */,
 				5FFDC8A417615C8D007B19E0 /* DataLanguages.plist in Resources */,
+				5F972DC11764091D00412211 /* checkbox-checked.png in Resources */,
+				5F972DC21764091D00412211 /* checkbox.png in Resources */,
+				5F8F78EC17640D68006820B4 /* RegisterView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +360,8 @@
 				5FFDC8A71761A851007B19E0 /* GetDataLanguages.m in Sources */,
 				5FDE3028176385DB007F2A16 /* DataParse.m in Sources */,
 				5FDE3029176385DB007F2A16 /* JSONKit.m in Sources */,
+				5F972DBE1764066400412211 /* SettingManager.m in Sources */,
+				5F8F78EB17640D68006820B4 /* RegisterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,12 @@
 	<dict/>
 	<key>English</key>
 	<dict>
+		<key>registerview_label</key>
+		<string>Regist an account ezV</string>
+		<key>rememberlabel</key>
+		<string>Remember</string>
 		<key>messalertlogin</key>
-		<string>Login to learn more</string>
+		<string>Login with account ezV to learn more or register now if you don&apos;t have an account.</string>
 		<key>titlealertlogin</key>
 		<string>Login</string>
 		<key>titlealertmenu</key>
@@ -39,12 +43,14 @@
 	<dict/>
 	<key>VietNamese</key>
 	<dict>
+		<key>rememberlabel</key>
+		<string>Ghi nhớ</string>
 		<key>titlealertlogin</key>
-		<string></string>
+		<string>Đăng nhập</string>
 		<key>messalertlogin</key>
-		<string></string>
+		<string>Đăng nhập tài khoản evZ để chọn thêm nhiều bài học hoặc đăng ký tài khoản nếu bạn chưa có.</string>
 		<key>titlealertmenu</key>
-		<string>Chu y</string>
+		<string>Chú ý</string>
 		<key>titlebuttoncancel</key>
 		<string>Huỷ</string>
 		<key>alertmenumess</key>

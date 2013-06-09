@@ -24,5 +24,6 @@
 #define DATA_ALERTMENUTITLE_KEY @"titlealertmenu"
 #define DATA_ALERTLOGINTITLE_KEY @"titlealertlogin"
 #define DATA_ALERTLOGINMESS_KEY @"messalertlogin"
+#define DATA_REMEMBERLABEL_KEY @"rememberlabel"
 +(NSString *) GetStringForKey:(NSString *)key andChooseLanguages:(int) chooseLanguage;
 @end

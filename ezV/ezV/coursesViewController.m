@@ -29,8 +29,9 @@
 
 - (void)viewDidLoad
 {
-    myApp = (AppDelegate*)[UIApplication sharedApplication].delegate;
+    myApp = (AppDelegate*)[UIApplication sharedApplication].delegate;    
     [self MakeLoginView];
+    arrayOfCourses = [[NSMutableArray alloc]init];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -42,86 +43,157 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
+//number of sections in tableview
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+/*
+ Neu lua chon them the loai o view nhan du lieu thi hien thi mot section la thu hoac chi con
+ neu lua chon them the loai o view quan li the loai thi hien thi hai section ca thu lan chi
+ */
+
+//Number of rows in talbleview;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return [arrayOfCourses  count];
+    
+    [self.tableView reloadData];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = nil;
+    static NSString *customCellIdentifier = @"CustomCellIdentifier";
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:customCellIdentifier];
+    if(cell == nil){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:customCellIdentifier];
+    }
+    cell.textLabel.text = [arrayOfCourses objectAtIndex:indexPath.row];
+    //    cell.textLabel.textAlignment = UITextAlignmentCenter;
+    //    cell.textLabel.textColor = [UIColor blueColor];
+    return cell;
+    
+}
+
+/*  Lua chon cell tren table, gan gia tri cua cell cho stringCellChoosed
+ thuc hien cho viec hien thi hoac chinh sua, xoa
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //    if(myApp.luaChonViewTheLoai == 1){
+    //        if(self.chooseViewThuChi)
+    //            stringCellChoosed = [arrayThu objectAtIndex:indexPath.row];
+    //        else
+    //            stringCellChoosed = [arrayChi objectAtIndex:indexPath.row];
+    //
+    //        [self dismissModalViewControllerAnimated:YES];
+    //        ViewNhapDuLieuGiaoDichThuChi *idview = ID;
+    //        idview.fieldTheLoai.text = stringCellChoosed;
+    //        [self getIDHT];
+    //        idview.idHT = idHT;
+    //    }
+    //    else{
+    //        stringCellChoosed = [[tmpArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    //        if(indexPath.section == 0){
+    //            chooseThuChi = YES;
+    //            saveBeforeEdit = YES;
+    //            [buttonChooseThuChi setTitle:@"Thu" forState:UIControlStateNormal];
+    //            indexInSectionWhenDelete = indexPath.row;
+    //        }
+    //        else{
+    //            chooseThuChi = NO;
+    //            saveBeforeEdit = NO;
+    //            [buttonChooseThuChi setTitle:@"Chi" forState:UIControlStateNormal];
+    //            indexInSectionWhenDelete = indexPath.row;
+    //        }
+    //    }
+}
+
+
+
+
 -(void) MakeLoginView
 {
-//	if(lblPass == nil)
-//	{
-//		lblPass = [[UILabel alloc] init];
-//		[lblPass setBackgroundColor:[UIColor clearColor]];
-//		[lblPass setTextColor:[UIColor whiteColor]];
-//		[lblPass setText:[GetDataLanguages GetStringForKey:DATA_PASS_KEY andChooseLanguages:myApp.chooseLanguage]];
-//		[lblPass setFrame:F_LOGIN_LBL_PASS];
-//	}
-//	if(lblRemember == nil)
-//	{
-//		lblRemember = [[UILabel alloc] init];
-//		[lblRemember setBackgroundColor:[UIColor clearColor]];
-//		[lblRemember setTextColor:[UIColor whiteColor]];
-//		[lblRemember setText:[GetDataLanguages GetStringForKey:DATA_REMEMBERLABEL_KEY andChooseLanguages:myApp.chooseLanguage]];
-//		[lblRemember setFrame:F_LOGIN_LBL_REMEMBER];
-//	}
-//	if(lblName == nil)
-//	{
-//		lblName = [[UILabel alloc] init];
-//		[lblName setBackgroundColor:[UIColor clearColor]];
-//		[lblName setTextColor:[UIColor whiteColor]];
-//		[lblName setText:[GetDataLanguages GetStringForKey:DATA_USERNAME_KEY andChooseLanguages:myApp.chooseLanguage]];
-//		[lblName setFrame:F_LOGIN_LBL_NAME];
-//	}
-//	if(btnRemember==nil)
-//	{
-//		btnRemember = [[UIButton alloc] init];
-//		[btnRemember setFrame:F_LOGIN_REMEMBER_BUTTON];
-//		if([SettingManager GetAllowRememberAccountPermition])
-//			[btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_CHECKED] forState:0];
-//		else
-//			[btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_UNCHECKED] forState:0];
-//		[btnRemember addTarget:self action:@selector(OnLoginButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-//	}
-//	if(txtfName == nil)
-//	{
-//		txtfName = [[UITextField alloc] init];
-//		[txtfName setBorderStyle:UITextBorderStyleRoundedRect];
-//		[txtfName setTextAlignment:UITextAlignmentCenter];
-//		txtfName.placeholder = [GetDataLanguages GetStringForKey:DATA_USERNAME_KEY andChooseLanguages:myApp.chooseLanguage];
-//		txtfName.returnKeyType = UIReturnKeyDone;
-//		txtfName.delegate = self;
-//		[txtfName setFrame:F_LOGIN_TXTF_NAME];
-//	}
-//	if(txtfPass == nil)
-//	{
-//		txtfPass = [[UITextField alloc] init];
-//		[txtfPass setBorderStyle:UITextBorderStyleRoundedRect];
-//		[txtfPass setTextAlignment:UITextAlignmentCenter];
-//		txtfPass.placeholder = [GetDataLanguages GetStringForKey:DATA_PASS_KEY andChooseLanguages:myApp.chooseLanguage];
-//		txtfPass.returnKeyType = UIReturnKeyDone;
-//		txtfPass.secureTextEntry = TRUE;
-//		txtfPass.delegate = self;
-//		[txtfPass setFrame:F_LOGIN_TXTF_PASS];
-//	}
-//    
-//	[lblName removeFromSuperview];
-//	[lblPass removeFromSuperview];
-//	[lblRemember removeFromSuperview];
-//	[txtfName removeFromSuperview];
-//	[txtfPass removeFromSuperview];
-//	[btnRemember removeFromSuperview];
-//	
-//	loginAlertView = [[UIAlertView alloc] initWithTitle:[GetDataLanguages GetStringForKey:DATA_ALERTLOGINTITLE_KEY andChooseLanguages:myApp.chooseLanguage]
-//                                                message:nil
-//                                               delegate:self
-//                                      cancelButtonTitle:[GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage]
-//                                      otherButtonTitles:[GetDataLanguages GetStringForKey:DATA_LOGIN_KEY andChooseLanguages:myApp.chooseLanguage],[GetDataLanguages GetStringForKey:DATA_REGISTER_KEY andChooseLanguages:myApp.chooseLanguage],nil];
-//	loginAlertView.tag = LOGIN_LOGIN_ALERT_TAG;
-//    txtfName.tag = 1;
-//    txtfPass.tag = 2;
-//    
-//	[loginAlertView addSubview:lblName];
-//	[loginAlertView addSubview:txtfName];
-//	[loginAlertView addSubview:lblPass];
-//	[loginAlertView addSubview:txtfPass];
-//	[loginAlertView addSubview:btnRemember];
-//	[loginAlertView addSubview:lblRemember];
+	if(lblPass == nil)
+	{
+		lblPass = [[UILabel alloc] init];
+		[lblPass setBackgroundColor:[UIColor clearColor]];
+		[lblPass setTextColor:[UIColor whiteColor]];
+		[lblPass setText:((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_PASS_KEY]).language];
+		[lblPass setFrame:F_LOGIN_LBL_PASS];
+	}
+	if(lblRemember == nil)
+	{
+		lblRemember = [[UILabel alloc] init];
+		[lblRemember setBackgroundColor:[UIColor clearColor]];
+		[lblRemember setTextColor:[UIColor whiteColor]];
+		[lblRemember setText:((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_REMEMBER_KEY]).language];
+         [lblRemember setFrame:F_LOGIN_LBL_REMEMBER];
+	}
+	if(lblName == nil)
+	{
+		lblName = [[UILabel alloc] init];
+		[lblName setBackgroundColor:[UIColor clearColor]];
+		[lblName setTextColor:[UIColor whiteColor]];
+		[lblName setText:((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_USERNAME_KEY]).language];
+		[lblName setFrame:F_LOGIN_LBL_NAME];
+	}
+	if(btnRemember==nil)
+	{
+		btnRemember = [[UIButton alloc] init];
+		[btnRemember setFrame:F_LOGIN_REMEMBER_BUTTON];
+		if([SettingManager GetAllowRememberAccountPermition])
+			[btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_CHECKED] forState:0];
+		else
+			[btnRemember setBackgroundImage:[UIImage imageNamed:IMG_LOGIN_REMEMBER_UNCHECKED] forState:0];
+		[btnRemember addTarget:self action:@selector(OnLoginButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+	}
+	if(txtfName == nil)
+	{
+		txtfName = [[UITextField alloc] init];
+		[txtfName setBorderStyle:UITextBorderStyleRoundedRect];
+		[txtfName setTextAlignment:UITextAlignmentCenter];
+		txtfName.placeholder = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_USERNAME_KEY]).language;
+		txtfName.returnKeyType = UIReturnKeyDone;
+		txtfName.delegate = self;
+		[txtfName setFrame:F_LOGIN_TXTF_NAME];
+	}
+	if(txtfPass == nil)
+	{
+		txtfPass = [[UITextField alloc] init];
+		[txtfPass setBorderStyle:UITextBorderStyleRoundedRect];
+		[txtfPass setTextAlignment:UITextAlignmentCenter];
+		txtfPass.placeholder = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_PASS_KEY]).language;
+		txtfPass.returnKeyType = UIReturnKeyDone;
+		txtfPass.secureTextEntry = TRUE;
+		txtfPass.delegate = self;
+		[txtfPass setFrame:F_LOGIN_TXTF_PASS];
+	}
+    
+	[lblName removeFromSuperview];
+	[lblPass removeFromSuperview];
+	[lblRemember removeFromSuperview];
+	[txtfName removeFromSuperview];
+	[txtfPass removeFromSuperview];
+	[btnRemember removeFromSuperview];
+	
+	loginAlertView = [[UIAlertView alloc] initWithTitle:((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LOGIN_KEY]).language                                                  message:nil
+                                    delegate:self
+                                      cancelButtonTitle:((databaseList*)[myApp.arrayLanguage objectAtIndex:DATA_CACEL_KEY]).language
+                                      otherButtonTitles:((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LOGIN_KEY]).language,((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_REGIST_KEY]).language,nil];
+	loginAlertView.tag = LOGIN_LOGIN_ALERT_TAG;
+    txtfName.tag = 1;
+    txtfPass.tag = 2;
+    
+	[loginAlertView addSubview:lblName];
+	[loginAlertView addSubview:txtfName];
+	[loginAlertView addSubview:lblPass];
+	[loginAlertView addSubview:txtfPass];
+	[loginAlertView addSubview:btnRemember];
+	[loginAlertView addSubview:lblRemember];
 }
 
 
@@ -368,5 +440,8 @@
     NSLog(@"Sid: %@", arraySID);
 }
 
-
+- (void)viewDidUnload {
+    [self setTableView:nil];
+    [super viewDidUnload];
+}
 @end

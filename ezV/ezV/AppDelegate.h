@@ -19,5 +19,5 @@
 @property (assign, nonatomic) NSString *userName;
 @property (assign, nonatomic) NSString *pass;
 @property (assign, nonatomic) BOOL theFirst;
-@property (assign, nonatomic) NSMutableArray *arrayLanguage;
+@property (nonatomic, retain) NSMutableArray *arrayLanguage;
 @end

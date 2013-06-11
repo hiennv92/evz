@@ -13,7 +13,7 @@
 @synthesize userName = _userName;
 @synthesize pass = _pass;
 @synthesize theFirst = _theFirst;
-@synthesize arrayLanguage = _arrayLanguage;
+@synthesize arrayLanguage;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

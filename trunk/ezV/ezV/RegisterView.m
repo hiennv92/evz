@@ -38,29 +38,7 @@
     myApp = (AppDelegate*)[UIApplication sharedApplication].delegate;
     parserData = [[DataParse alloc]init];
     [super viewDidLoad];
-    fieldName.tag = 1;
-    fieldNameSignin.tag = 2;
-    fieldPass.tag = 3;
-    fieldRepass.tag = 4;
-    fieldEmail.tag = 5;
-    
-    fieldName.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELNAME andChooseLanguages:myApp.chooseLanguage];
-    fieldNameSignin.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELUSERNAME andChooseLanguages:myApp.chooseLanguage];
-    fieldPass.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELPASS andChooseLanguages:myApp.chooseLanguage];
-    fieldRepass.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELREPASS andChooseLanguages:myApp.chooseLanguage];
-    fieldEmail.placeholder = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELEMAIL andChooseLanguages:myApp.chooseLanguage];
-    self.lbTitle.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_TITLE andChooseLanguages:myApp.chooseLanguage];
-    self.lbName.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELNAME andChooseLanguages:myApp.chooseLanguage];
-    self.lbUserName.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELUSERNAME andChooseLanguages:myApp.chooseLanguage];
-    self.labelPass.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELPASS andChooseLanguages:myApp.chooseLanguage];
-    self.lbRepass.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELREPASS andChooseLanguages:myApp.chooseLanguage];
-    self.labelEmail.text = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_LABELEMAIL andChooseLanguages:myApp.chooseLanguage];
-    self.buttonDone.title = [GetDataLanguages GetStringForKey:DATA_REGISTERVIEW_BUTTONDONE andChooseLanguages:myApp.chooseLanguage];
-    self.buttonCancel.title = [GetDataLanguages GetStringForKey:DATA_TITLECANCEL_KEY andChooseLanguages:myApp.chooseLanguage];
-    
-    
-    //Bien lua chon hien thi thay doi noi dung cac button trong view add group;
-    switchButton = 1;
+    [self loadInterface];
 
     // Do any additional setup after loading the view from its nib.
 }
@@ -193,6 +171,28 @@
         menuView = [[MenuView alloc] initWithNibName:@"MenuView_iphone" bundle:[NSBundle mainBundle]];
     }
     [self presentModalViewController:menuView animated:YES];
+}
+
+-(void)loadInterface{
+    fieldName.tag = 1;
+    fieldNameSignin.tag = 2;
+    fieldPass.tag = 3;
+    fieldRepass.tag = 4;
+    fieldEmail.tag = 5;
+    
+    fieldName.placeholder = ((databaseList*)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_FULLNAME_KEY]).language;
+    fieldNameSignin.placeholder = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_USERNAME_KEY]).language;
+    fieldPass.placeholder = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_PASS_KEY]).language;
+    fieldRepass.placeholder = ((databaseList*)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_REPASS_KEY]).language;
+    fieldEmail.placeholder = ((databaseList*)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_EMAIL_KEY]).language;
+    self.lbTitle.text = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_RESGISTERVCTITLE_KEY]).language;
+    self.lbName.text = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_FULLNAME_KEY]).language;
+    self.lbUserName.text = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_USERNAME_KEY]).language;
+    self.labelPass.text = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_PASS_KEY]).language;
+    self.lbRepass.text = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_REPASS_KEY]).language;
+    self.labelEmail.text = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_EMAIL_KEY]).language;
+    self.buttonDone.title = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_FINISH_KEY]).language;
+    self.buttonCancel.title = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_CACEL_KEY]).language;
 }
 
 - (void)viewDidUnload {

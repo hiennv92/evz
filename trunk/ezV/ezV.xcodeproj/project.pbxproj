@@ -19,7 +19,14 @@
 		34D194681747E5B800193599 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194671747E5B800193599 /* Default.png */; };
 		34D1946A1747E5B800193599 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D194691747E5B800193599 /* Default@2x.png */; };
 		34D1946C1747E5B800193599 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D1946B1747E5B800193599 /* Default-568h@2x.png */; };
+		5F2DF9C31766D51300B33FE6 /* databaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DF9C01766D51300B33FE6 /* databaseList.m */; };
+		5F2DF9C41766D51300B33FE6 /* myDatabaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DF9C21766D51300B33FE6 /* myDatabaseList.m */; };
+		5F2DF9C81766D55300B33FE6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2DF9C71766D55200B33FE6 /* libsqlite3.0.dylib */; };
+		5F2DF9D61766FB6800B33FE6 /* DataLanguages.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5F2DF9D51766FB6800B33FE6 /* DataLanguages.sqlite */; };
 		5F8F78EB17640D68006820B4 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F78E917640D68006820B4 /* RegisterView.m */; };
+		5F96688D176691B3007B1DC5 /* coursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F96688B176691B3007B1DC5 /* coursesViewController.m */; };
+		5F96688E176691B3007B1DC5 /* coursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F96688C176691B3007B1DC5 /* coursesViewController.xib */; };
+		5F966892176691E4007B1DC5 /* coursesViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F966891176691E4007B1DC5 /* coursesViewController_iphone.xib */; };
 		5F972DBE1764066400412211 /* SettingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F972DBD1764066400412211 /* SettingManager.m */; };
 		5F972DC11764091D00412211 /* checkbox-checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F972DBF1764091D00412211 /* checkbox-checked.png */; };
 		5F972DC21764091D00412211 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F972DC01764091D00412211 /* checkbox.png */; };
@@ -39,8 +46,6 @@
 		5FFDC89E17614B5F007B19E0 /* LearnViewController_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89C17614B5F007B19E0 /* LearnViewController_ipad.xib */; };
 		5FFDC8A017614B75007B19E0 /* LearnViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89F17614B75007B19E0 /* LearnViewController_iphone.xib */; };
 		5FFDC8A217614BF0007B19E0 /* TestViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC8A117614BF0007B19E0 /* TestViewController_iphone.xib */; };
-		5FFDC8A417615C8D007B19E0 /* DataLanguages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */; };
-		5FFDC8A71761A851007B19E0 /* GetDataLanguages.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +66,19 @@
 		34D194671747E5B800193599 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		34D194691747E5B800193599 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		34D1946B1747E5B800193599 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5F2DF9BF1766D51300B33FE6 /* databaseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = databaseList.h; sourceTree = "<group>"; };
+		5F2DF9C01766D51300B33FE6 /* databaseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = databaseList.m; sourceTree = "<group>"; };
+		5F2DF9C11766D51300B33FE6 /* myDatabaseList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myDatabaseList.h; sourceTree = "<group>"; };
+		5F2DF9C21766D51300B33FE6 /* myDatabaseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myDatabaseList.m; sourceTree = "<group>"; };
+		5F2DF9C71766D55200B33FE6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		5F2DF9CA1766E31B00B33FE6 /* NSMutableData_LanguageLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMutableData_LanguageLayout.h; sourceTree = "<group>"; };
+		5F2DF9D51766FB6800B33FE6 /* DataLanguages.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DataLanguages.sqlite; sourceTree = "<group>"; };
 		5F8F78E817640D68006820B4 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 		5F8F78E917640D68006820B4 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		5F96688A176691B3007B1DC5 /* coursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coursesViewController.h; sourceTree = "<group>"; };
+		5F96688B176691B3007B1DC5 /* coursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coursesViewController.m; sourceTree = "<group>"; };
+		5F96688C176691B3007B1DC5 /* coursesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = coursesViewController.xib; sourceTree = "<group>"; };
+		5F966891176691E4007B1DC5 /* coursesViewController_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = coursesViewController_iphone.xib; sourceTree = "<group>"; };
 		5F972DBB1763F4DF00412211 /* LoginLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLayout.h; sourceTree = "<group>"; };
 		5F972DBC1764066400412211 /* SettingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingManager.h; sourceTree = "<group>"; };
 		5F972DBD1764066400412211 /* SettingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingManager.m; sourceTree = "<group>"; };
@@ -91,9 +107,6 @@
 		5FFDC89C17614B5F007B19E0 /* LearnViewController_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController_ipad.xib; sourceTree = "<group>"; };
 		5FFDC89F17614B75007B19E0 /* LearnViewController_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController_iphone.xib; sourceTree = "<group>"; };
 		5FFDC8A117614BF0007B19E0 /* TestViewController_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController_iphone.xib; sourceTree = "<group>"; };
-		5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataLanguages.plist; sourceTree = "<group>"; };
-		5FFDC8A51761A851007B19E0 /* GetDataLanguages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDataLanguages.h; sourceTree = "<group>"; };
-		5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDataLanguages.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F2DF9C81766D55300B33FE6 /* libsqlite3.0.dylib in Frameworks */,
 				34D194561747E5B800193599 /* UIKit.framework in Frameworks */,
 				34D194581747E5B800193599 /* Foundation.framework in Frameworks */,
 				34D1945A1747E5B800193599 /* CoreGraphics.framework in Frameworks */,
@@ -130,6 +144,7 @@
 		34D194541747E5B800193599 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5F2DF9C71766D55200B33FE6 /* libsqlite3.0.dylib */,
 				34D194551747E5B800193599 /* UIKit.framework */,
 				34D194571747E5B800193599 /* Foundation.framework */,
 				34D194591747E5B800193599 /* CoreGraphics.framework */,
@@ -140,6 +155,7 @@
 		34D1945B1747E5B800193599 /* ezV */ = {
 			isa = PBXGroup;
 			children = (
+				5F9668891766918B007B1DC5 /* select courses view */,
 				5F972DBA1763F4B700412211 /* Layout */,
 				5FDE3023176385B3007F2A16 /* Data parse */,
 				5F925FA4176304F7007E4DA7 /* Datalanguages */,
@@ -177,17 +193,31 @@
 		5F925FA4176304F7007E4DA7 /* Datalanguages */ = {
 			isa = PBXGroup;
 			children = (
-				5FFDC8A317615C8D007B19E0 /* DataLanguages.plist */,
-				5FFDC8A51761A851007B19E0 /* GetDataLanguages.h */,
-				5FFDC8A61761A851007B19E0 /* GetDataLanguages.m */,
+				5F2DF9BF1766D51300B33FE6 /* databaseList.h */,
+				5F2DF9C01766D51300B33FE6 /* databaseList.m */,
+				5F2DF9C11766D51300B33FE6 /* myDatabaseList.h */,
+				5F2DF9C21766D51300B33FE6 /* myDatabaseList.m */,
+				5F2DF9D51766FB6800B33FE6 /* DataLanguages.sqlite */,
 			);
 			name = Datalanguages;
+			sourceTree = "<group>";
+		};
+		5F9668891766918B007B1DC5 /* select courses view */ = {
+			isa = PBXGroup;
+			children = (
+				5F96688A176691B3007B1DC5 /* coursesViewController.h */,
+				5F96688B176691B3007B1DC5 /* coursesViewController.m */,
+				5F96688C176691B3007B1DC5 /* coursesViewController.xib */,
+				5F966891176691E4007B1DC5 /* coursesViewController_iphone.xib */,
+			);
+			name = "select courses view";
 			sourceTree = "<group>";
 		};
 		5F972DBA1763F4B700412211 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
 				5F972DBB1763F4DF00412211 /* LoginLayout.h */,
+				5F2DF9CA1766E31B00B33FE6 /* NSMutableData_LanguageLayout.h */,
 			);
 			name = Layout;
 			sourceTree = "<group>";
@@ -335,10 +365,12 @@
 				5FFDC89E17614B5F007B19E0 /* LearnViewController_ipad.xib in Resources */,
 				5FFDC8A017614B75007B19E0 /* LearnViewController_iphone.xib in Resources */,
 				5FFDC8A217614BF0007B19E0 /* TestViewController_iphone.xib in Resources */,
-				5FFDC8A417615C8D007B19E0 /* DataLanguages.plist in Resources */,
 				5F972DC11764091D00412211 /* checkbox-checked.png in Resources */,
 				5F972DC21764091D00412211 /* checkbox.png in Resources */,
 				5F980F8717659E90002AF7C8 /* RegisterView.xib in Resources */,
+				5F96688E176691B3007B1DC5 /* coursesViewController.xib in Resources */,
+				5F966892176691E4007B1DC5 /* coursesViewController_iphone.xib in Resources */,
+				5F2DF9D61766FB6800B33FE6 /* DataLanguages.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,11 +389,13 @@
 				5FFDC89317614AF6007B19E0 /* SettingViewController.m in Sources */,
 				5FFDC89817614B22007B19E0 /* IntroViewController.m in Sources */,
 				5FFDC89D17614B5F007B19E0 /* LearnViewController.m in Sources */,
-				5FFDC8A71761A851007B19E0 /* GetDataLanguages.m in Sources */,
 				5FDE3028176385DB007F2A16 /* DataParse.m in Sources */,
 				5FDE3029176385DB007F2A16 /* JSONKit.m in Sources */,
 				5F972DBE1764066400412211 /* SettingManager.m in Sources */,
 				5F8F78EB17640D68006820B4 /* RegisterView.m in Sources */,
+				5F96688D176691B3007B1DC5 /* coursesViewController.m in Sources */,
+				5F2DF9C31766D51300B33FE6 /* databaseList.m in Sources */,
+				5F2DF9C41766D51300B33FE6 /* myDatabaseList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

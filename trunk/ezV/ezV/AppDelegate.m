@@ -13,6 +13,7 @@
 @synthesize userName = _userName;
 @synthesize pass = _pass;
 @synthesize theFirst = _theFirst;
+@synthesize arrayLanguage = _arrayLanguage;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -27,6 +28,8 @@
 //        self.loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iphone" bundle:[NSBundle mainBundle]];
 //    }
 //
+ 
+    
     //Default language is English
     self.chooseLanguage = 1;
     self.theFirst = YES;

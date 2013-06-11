@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "LoginLayout.h"
 #import "SettingManager.h"
+#import "databaseList.h"
+#import "NSMutableData_LanguageLayout.h"
 
 #define LOGIN_INDICATOR_SHOW_TIME 30
 #define LOGIN_REGIST_ALERT_TAG 1
@@ -20,7 +22,7 @@
 #define LOGIN_REGIST_RESUTL_FAIL_TAG 7
 #define LOGIN_LOGIN_RESULT_FAIL_TAG 8
 
-@interface coursesViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate>{
+@interface coursesViewController : UIViewController<UITextFieldDelegate, UIAlertViewDelegate, UITableViewDataSource, UITableViewDelegate>{
     UIAlertView *loginAlertView;
     UIButton *btnRemember,*btnLogin,*btnCancel,*btnRegister;
 	UILabel *lblName,*lblPass,*lblRemember,*lblLogin;
@@ -32,8 +34,12 @@
 	UIActivityIndicatorView *indicator;
 	int indicatorTimeCountDown;
 	NSTimer *indicatorTimer;
+    
+    
+    NSMutableArray *arrayOfCourses;
 
 }
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (IBAction)buttonBackMenu:(id)sender;
 
 -(void)ShowIndicator;

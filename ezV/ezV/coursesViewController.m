@@ -33,6 +33,17 @@
     [self MakeLoginView];
     arrayOfCourses = [[NSMutableArray alloc]init];
     
+    [arrayOfCourses addObject:@"Bai so 1: Bang chu cai"];
+    [arrayOfCourses addObject:@"Bai so 2: Cac van, am"];
+    [arrayOfCourses addObject:@"Bai so 3: Cach dat cau"];
+    [arrayOfCourses addObject:@"Bai so 4: Nguyen am, phu am"];
+    [arrayOfCourses addObject:@"Bai so 5: Chu ngu, vi ngu"];
+    [arrayOfCourses addObject:@"Bai so 6: Cach phat am"];
+    [arrayOfCourses addObject:@"Bai so 7: Viet doan van"];
+    [arrayOfCourses addObject:@"Bai so 8: Viet bai van"];
+    [arrayOfCourses addObject:@"Bai so 9: Van ta canh"];
+
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -73,46 +84,17 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:customCellIdentifier];
     }
     cell.textLabel.text = [arrayOfCourses objectAtIndex:indexPath.row];
-    //    cell.textLabel.textAlignment = UITextAlignmentCenter;
-    //    cell.textLabel.textColor = [UIColor blueColor];
+    cell.textLabel.textColor = [UIColor blueColor];
     return cell;
-    
 }
 
 /*  Lua chon cell tren table, gan gia tri cua cell cho stringCellChoosed
  thuc hien cho viec hien thi hoac chinh sua, xoa
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //    if(myApp.luaChonViewTheLoai == 1){
-    //        if(self.chooseViewThuChi)
-    //            stringCellChoosed = [arrayThu objectAtIndex:indexPath.row];
-    //        else
-    //            stringCellChoosed = [arrayChi objectAtIndex:indexPath.row];
-    //
-    //        [self dismissModalViewControllerAnimated:YES];
-    //        ViewNhapDuLieuGiaoDichThuChi *idview = ID;
-    //        idview.fieldTheLoai.text = stringCellChoosed;
-    //        [self getIDHT];
-    //        idview.idHT = idHT;
-    //    }
-    //    else{
-    //        stringCellChoosed = [[tmpArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-    //        if(indexPath.section == 0){
-    //            chooseThuChi = YES;
-    //            saveBeforeEdit = YES;
-    //            [buttonChooseThuChi setTitle:@"Thu" forState:UIControlStateNormal];
-    //            indexInSectionWhenDelete = indexPath.row;
-    //        }
-    //        else{
-    //            chooseThuChi = NO;
-    //            saveBeforeEdit = NO;
-    //            [buttonChooseThuChi setTitle:@"Chi" forState:UIControlStateNormal];
-    //            indexInSectionWhenDelete = indexPath.row;
-    //        }
-    //    }
+    stringCellChoosed = [arrayOfCourses objectAtIndex:indexPath.row];
+    NSLog(@"Chon bai: %@",stringCellChoosed);
 }
-
-
 
 
 -(void) MakeLoginView
@@ -350,6 +332,14 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction)buttonViewInfo:(id)sender {
+    
+}
+
+- (IBAction)buttonChoose:(id)sender {
+    [loginAlertView show];
+}
+
 -(void) ShowIndicator
 {
     //	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -442,6 +432,9 @@
 
 - (void)viewDidUnload {
     [self setTableView:nil];
+    [self setBackMenu:nil];
+    [self setViewInfo:nil];
+    [self setChoose:nil];
     [super viewDidUnload];
 }
 @end

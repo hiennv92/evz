@@ -37,13 +37,14 @@
 }
 
 - (IBAction)backAction:(id)sender {
-    MenuView *menuView;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        menuView = [[MenuView alloc] initWithNibName:@"MenuView_ipad" bundle:[NSBundle mainBundle]];
-    }
-    else{
-        menuView = [[MenuView alloc] initWithNibName:@"MenuView_iphone" bundle:[NSBundle mainBundle]];
-    }
-    [self presentModalViewController:menuView animated:YES];
+//    MenuView *menuView;
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//        menuView = [[MenuView alloc] initWithNibName:@"MenuView_ipad" bundle:[NSBundle mainBundle]];
+//    }
+//    else{
+//        menuView = [[MenuView alloc] initWithNibName:@"MenuView_iphone" bundle:[NSBundle mainBundle]];
+//    }
+//    [self presentModalViewController:menuView animated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

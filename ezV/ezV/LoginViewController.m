@@ -8,7 +8,6 @@
 
 #import "LoginViewController.h"
 #import "AppDelegate.h"
-#import "GetDataLanguages.h"
 
 
 @interface LoginViewController (){
@@ -32,11 +31,11 @@
 {
     myApp = (AppDelegate*)[UIApplication sharedApplication].delegate;
     
-    [m_LoginButton.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_LOGIN_KEY andChooseLanguages:myApp.chooseLanguage]];
-    [m_SignUpButton.titleLabel setText:[GetDataLanguages GetStringForKey:DATA_REGISTER_KEY andChooseLanguages:myApp.chooseLanguage]];
-    [self.labelPassword setText:[GetDataLanguages GetStringForKey:DATA_PASS_KEY andChooseLanguages:myApp.chooseLanguage]];
-    [self.labelUserName setText:[GetDataLanguages GetStringForKey:DATA_USERNAME_KEY andChooseLanguages:myApp.chooseLanguage]];
-    
+    [m_LoginButton setTitle:((databaseList*)[myApp.arrayLanguage objectAtIndex:DATA_LOGIN_KEY]).language forState:UIControlStateNormal];
+    [m_SignUpButton setTitle:((databaseList*)[myApp.arrayLanguage objectAtIndex:DATA_REMEMBER_KEY]).language forState:UIControlStateNormal];
+    [self.labelPassword setText:((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_PASS_KEY]).language];
+     [self.labelUserName setText:((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_LABEL_USERNAME_KEY]).language];
+//    
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

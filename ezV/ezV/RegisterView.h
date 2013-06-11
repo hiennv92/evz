@@ -10,7 +10,6 @@
 #import "DataParse.h"
 
 @interface RegisterView : UIViewController<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate,NSXMLParserDelegate,NSURLConnectionDelegate>{
-    int switchButton;
 }
 
 - (IBAction)buttonFinish:(id)sender;
@@ -31,5 +30,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *fieldEmail;
 @property (strong, nonatomic) IBOutlet UIView *signForm;
 
+-(void)loadInterface;
 
 @end

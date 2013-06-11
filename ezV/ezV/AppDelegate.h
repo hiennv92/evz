@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "MenuView.h"
 
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (assign, nonatomic) NSInteger chooseLanguage;
 @property (strong, nonatomic) UIWindow *window;
@@ -18,5 +19,5 @@
 @property (assign, nonatomic) NSString *userName;
 @property (assign, nonatomic) NSString *pass;
 @property (assign, nonatomic) BOOL theFirst;
-
+@property (assign, nonatomic) NSMutableArray *arrayLanguage;
 @end

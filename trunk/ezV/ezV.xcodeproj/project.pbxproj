@@ -22,7 +22,7 @@
 		5F2DF9C31766D51300B33FE6 /* databaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DF9C01766D51300B33FE6 /* databaseList.m */; };
 		5F2DF9C41766D51300B33FE6 /* myDatabaseList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2DF9C21766D51300B33FE6 /* myDatabaseList.m */; };
 		5F2DF9C81766D55300B33FE6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2DF9C71766D55200B33FE6 /* libsqlite3.0.dylib */; };
-		5F2DF9D61766FB6800B33FE6 /* DataLanguages.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5F2DF9D51766FB6800B33FE6 /* DataLanguages.sqlite */; };
+		5F2DF9D817671CA900B33FE6 /* DataLanguages.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5F2DF9D717671CA800B33FE6 /* DataLanguages.sqlite */; };
 		5F8F78EB17640D68006820B4 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F78E917640D68006820B4 /* RegisterView.m */; };
 		5F96688D176691B3007B1DC5 /* coursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F96688B176691B3007B1DC5 /* coursesViewController.m */; };
 		5F96688E176691B3007B1DC5 /* coursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F96688C176691B3007B1DC5 /* coursesViewController.xib */; };
@@ -72,7 +72,7 @@
 		5F2DF9C21766D51300B33FE6 /* myDatabaseList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myDatabaseList.m; sourceTree = "<group>"; };
 		5F2DF9C71766D55200B33FE6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		5F2DF9CA1766E31B00B33FE6 /* NSMutableData_LanguageLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMutableData_LanguageLayout.h; sourceTree = "<group>"; };
-		5F2DF9D51766FB6800B33FE6 /* DataLanguages.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DataLanguages.sqlite; sourceTree = "<group>"; };
+		5F2DF9D717671CA800B33FE6 /* DataLanguages.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DataLanguages.sqlite; sourceTree = "<group>"; };
 		5F8F78E817640D68006820B4 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 		5F8F78E917640D68006820B4 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
 		5F96688A176691B3007B1DC5 /* coursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coursesViewController.h; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 				5F2DF9C01766D51300B33FE6 /* databaseList.m */,
 				5F2DF9C11766D51300B33FE6 /* myDatabaseList.h */,
 				5F2DF9C21766D51300B33FE6 /* myDatabaseList.m */,
-				5F2DF9D51766FB6800B33FE6 /* DataLanguages.sqlite */,
+				5F2DF9D717671CA800B33FE6 /* DataLanguages.sqlite */,
 			);
 			name = Datalanguages;
 			sourceTree = "<group>";
@@ -370,7 +370,7 @@
 				5F980F8717659E90002AF7C8 /* RegisterView.xib in Resources */,
 				5F96688E176691B3007B1DC5 /* coursesViewController.xib in Resources */,
 				5F966892176691E4007B1DC5 /* coursesViewController_iphone.xib in Resources */,
-				5F2DF9D61766FB6800B33FE6 /* DataLanguages.sqlite in Resources */,
+				5F2DF9D817671CA900B33FE6 /* DataLanguages.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

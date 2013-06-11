@@ -37,10 +37,18 @@
     
     
     NSMutableArray *arrayOfCourses;
+    NSString *stringCellChoosed;
 
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backMenu;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *viewInfo;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *choose;
+
+
 - (IBAction)buttonBackMenu:(id)sender;
+- (IBAction)buttonViewInfo:(id)sender;
+- (IBAction)buttonChoose:(id)sender;
 
 -(void)ShowIndicator;
 -(void)StopIndicator;

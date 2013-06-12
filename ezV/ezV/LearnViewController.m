@@ -47,4 +47,9 @@
     [self presentModalViewController:menuView animated:YES];
 //    [self dismissModalViewControllerAnimated:YES];
 }
+- (void)viewDidUnload {
+    [self setButtonBack:nil];
+    [self setTitleLabel:nil];
+    [super viewDidUnload];
+}
 @end

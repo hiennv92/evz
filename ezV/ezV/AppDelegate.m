@@ -20,30 +20,54 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    //
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-//        self.loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController_ipad" bundle:[NSBundle mainBundle]];
-//    }
-//    else{
-//        self.loginVC = [[LoginViewController alloc] initWithNibName:@"LoginViewController_iphone" bundle:[NSBundle mainBundle]];
-//    }
-//
- 
     
-    //Default language is English
-    self.chooseLanguage = 1;
     self.theFirst = YES;
-    
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.menuVC = [[MenuView alloc] initWithNibName:@"MenuView_ipad" bundle:[NSBundle mainBundle]];
-    }
+    //Check fist run
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if (![defaults objectForKey:@"firstRun"]){
+        [defaults setObject:@"true" forKey:@"firstRun"];
+        
+        NSLog(@"Chay ung dung lan dau tien");
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            self.langVC = [[LanguageVC alloc] initWithNibName:@"LanguageVC" bundle:[NSBundle mainBundle]];
+        }
+        else{
+            self.langVC = [[LanguageVC alloc] initWithNibName:@"LanguageVC_iphone" bundle:[NSBundle mainBundle]];
+        }
+        [self.window setRootViewController:self.langVC];
+	}
     else{
-        self.menuVC = [[MenuView alloc] initWithNibName:@"MenuView_iphone" bundle:[NSBundle mainBundle]];
+        NSString *stringLanguage;
+        stringLanguage = [[NSUserDefaults standardUserDefaults] objectForKey:@"language"];
+
+        if([stringLanguage isEqualToString:@"english"]){
+            self.chooseLanguage = 1;
+            NSLog(@"ENGLISH");
+        }
+        else if([stringLanguage isEqualToString:@"japanese"]){
+            self.chooseLanguage = 2;
+            NSLog(@"JAPANESE");
+        }
+        else if([stringLanguage isEqualToString:@"chinese"]){
+            self.chooseLanguage = 3;
+            NSLog(@"CHINESE");
+        }
+        else{
+            NSLog(@"VIETNAMESE");
+        }
+
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            self.menuVC = [[MenuView alloc] initWithNibName:@"MenuView_ipad" bundle:[NSBundle mainBundle]];
+        }
+        else{
+            self.menuVC = [[MenuView alloc] initWithNibName:@"MenuView_iphone" bundle:[NSBundle mainBundle]];
+        }
+        [self.window setRootViewController:self.menuVC];
     }
-    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     
 //    [self.window setRootViewController:self.loginVC];
-    [self.window setRootViewController:self.menuVC];
     [self.window makeKeyAndVisible];
     return YES;
 }

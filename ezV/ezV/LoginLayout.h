@@ -43,6 +43,10 @@
 #define F_LOGIN_TXTF_REG_PASS1 CGRectMake(20, 155, 250, 30)
 #define F_LOGIN_TXTF_REG_PASS2 CGRectMake(20, 205, 250, 30)
 
+#define FIRSTRUN_FILE_NAME @"frdt"
+#define FIRSTRUN_FILE_TYPE @"key"
+#define PROP_RUN_B4 @"runB4"
+
 
 ///TEST WEBSERVICES///
 #define kBgQueue dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0) //1

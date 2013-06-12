@@ -10,5 +10,7 @@
 
 @interface LearnViewController : UIViewController
 - (IBAction)backAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonBack;
 
 @end

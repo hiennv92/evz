@@ -153,21 +153,18 @@
     //Load Languages
     myDatabaseList *dataLanguage = [[myDatabaseList alloc] init];
     myApp.chooseLanguage = 4;
+
     if(myApp.theFirst){
         if(myApp.chooseLanguage == 1){
-            NSLog(@"ENGLISH");
             myApp.arrayLanguage = [dataLanguage getEnglish];
         }
         else if(myApp.chooseLanguage == 2){
-            NSLog(@"JAPANESE");
             myApp.arrayLanguage = [dataLanguage getJapanese];
         }
         else if(myApp.chooseLanguage == 3){
-            NSLog(@"CHINESE");
             myApp.arrayLanguage = [dataLanguage getChinese];
         }
         else{
-            NSLog(@"VIETNAMESE");
             myApp.arrayLanguage = [dataLanguage getVietNamese];
         }
     }

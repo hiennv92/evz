@@ -24,6 +24,9 @@
 		5F2DF9C81766D55300B33FE6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2DF9C71766D55200B33FE6 /* libsqlite3.0.dylib */; };
 		5F2DF9D817671CA900B33FE6 /* DataLanguages.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 5F2DF9D717671CA800B33FE6 /* DataLanguages.sqlite */; };
 		5F8F78EB17640D68006820B4 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F8F78E917640D68006820B4 /* RegisterView.m */; };
+		5F94487B1768DB9E005F125A /* LanguageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9448791768DB9E005F125A /* LanguageVC.m */; };
+		5F94487C1768DB9E005F125A /* LanguageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F94487A1768DB9E005F125A /* LanguageVC.xib */; };
+		5F94487E1768DC6C005F125A /* LanguageVC_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F94487D1768DC6C005F125A /* LanguageVC_iphone.xib */; };
 		5F96688D176691B3007B1DC5 /* coursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F96688B176691B3007B1DC5 /* coursesViewController.m */; };
 		5F96688E176691B3007B1DC5 /* coursesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F96688C176691B3007B1DC5 /* coursesViewController.xib */; };
 		5F966892176691E4007B1DC5 /* coursesViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F966891176691E4007B1DC5 /* coursesViewController_iphone.xib */; };
@@ -75,6 +78,10 @@
 		5F2DF9D717671CA800B33FE6 /* DataLanguages.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DataLanguages.sqlite; sourceTree = "<group>"; };
 		5F8F78E817640D68006820B4 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
 		5F8F78E917640D68006820B4 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		5F9448781768DB9E005F125A /* LanguageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageVC.h; sourceTree = "<group>"; };
+		5F9448791768DB9E005F125A /* LanguageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageVC.m; sourceTree = "<group>"; };
+		5F94487A1768DB9E005F125A /* LanguageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageVC.xib; sourceTree = "<group>"; };
+		5F94487D1768DC6C005F125A /* LanguageVC_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LanguageVC_iphone.xib; path = ../LanguageVC_iphone.xib; sourceTree = "<group>"; };
 		5F96688A176691B3007B1DC5 /* coursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coursesViewController.h; sourceTree = "<group>"; };
 		5F96688B176691B3007B1DC5 /* coursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coursesViewController.m; sourceTree = "<group>"; };
 		5F96688C176691B3007B1DC5 /* coursesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = coursesViewController.xib; sourceTree = "<group>"; };
@@ -240,6 +247,10 @@
 				5FFDC87617613499007B19E0 /* MenuView.m */,
 				5FFDC87E176141A9007B19E0 /* MenuView_ipad.xib */,
 				5FFDC87C1761417A007B19E0 /* MenuView_iphone.xib */,
+				5F9448781768DB9E005F125A /* LanguageVC.h */,
+				5F9448791768DB9E005F125A /* LanguageVC.m */,
+				5F94487A1768DB9E005F125A /* LanguageVC.xib */,
+				5F94487D1768DC6C005F125A /* LanguageVC_iphone.xib */,
 			);
 			name = MenuView;
 			sourceTree = "<group>";
@@ -371,6 +382,8 @@
 				5F96688E176691B3007B1DC5 /* coursesViewController.xib in Resources */,
 				5F966892176691E4007B1DC5 /* coursesViewController_iphone.xib in Resources */,
 				5F2DF9D817671CA900B33FE6 /* DataLanguages.sqlite in Resources */,
+				5F94487C1768DB9E005F125A /* LanguageVC.xib in Resources */,
+				5F94487E1768DC6C005F125A /* LanguageVC_iphone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +409,7 @@
 				5F96688D176691B3007B1DC5 /* coursesViewController.m in Sources */,
 				5F2DF9C31766D51300B33FE6 /* databaseList.m in Sources */,
 				5F2DF9C41766D51300B33FE6 /* myDatabaseList.m in Sources */,
+				5F94487B1768DB9E005F125A /* LanguageVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

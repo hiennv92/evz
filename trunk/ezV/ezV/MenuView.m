@@ -69,7 +69,8 @@
             else{
                 testVC = [[TestViewController alloc]initWithNibName:@"TestViewController_iphone" bundle:[NSBundle mainBundle]];
             }
-            [self presentModalViewController:testVC animated:YES];        }
+            [self presentModalViewController:testVC animated:YES];
+        }
         else {
             [self showButton];
         }

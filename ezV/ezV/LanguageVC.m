@@ -61,6 +61,7 @@
         [defaults setObject:@"chinese" forKey:@"language"];
         self.textFieldLanguage.text = @"Chinese";
     }
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (IBAction)buttonContinue:(id)sender {
@@ -72,6 +73,8 @@
     else{
         menuVC = [[MenuView alloc] initWithNibName:@"MenuView_iphone" bundle:[NSBundle mainBundle]];
     }
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [self presentModalViewController:menuVC animated:YES];
 }
 - (void)viewDidUnload {

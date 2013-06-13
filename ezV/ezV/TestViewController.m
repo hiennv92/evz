@@ -47,4 +47,8 @@
 //    [self dismissModalViewControllerAnimated:YES];
 }
 
+- (void)viewDidUnload {
+    [self setLabelTitle:nil];
+    [super viewDidUnload];
+}
 @end

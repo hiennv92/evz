@@ -10,5 +10,6 @@
 
 @interface TestViewController : UIViewController
 - (IBAction)backAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *labelTitle;
 
 @end

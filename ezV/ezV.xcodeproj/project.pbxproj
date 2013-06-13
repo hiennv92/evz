@@ -49,6 +49,8 @@
 		5FFDC89E17614B5F007B19E0 /* LearnViewController_ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89C17614B5F007B19E0 /* LearnViewController_ipad.xib */; };
 		5FFDC8A017614B75007B19E0 /* LearnViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC89F17614B75007B19E0 /* LearnViewController_iphone.xib */; };
 		5FFDC8A217614BF0007B19E0 /* TestViewController_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDC8A117614BF0007B19E0 /* TestViewController_iphone.xib */; };
+		5FFDD256176978EB00BDB7F6 /* sound_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDD254176978EB00BDB7F6 /* sound_off.png */; };
+		5FFDD257176978EB00BDB7F6 /* sound_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FFDD255176978EB00BDB7F6 /* sound_on.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,8 @@
 		5FFDC89C17614B5F007B19E0 /* LearnViewController_ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController_ipad.xib; sourceTree = "<group>"; };
 		5FFDC89F17614B75007B19E0 /* LearnViewController_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearnViewController_iphone.xib; sourceTree = "<group>"; };
 		5FFDC8A117614BF0007B19E0 /* TestViewController_iphone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController_iphone.xib; sourceTree = "<group>"; };
+		5FFDD254176978EB00BDB7F6 /* sound_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_off.png; sourceTree = "<group>"; };
+		5FFDD255176978EB00BDB7F6 /* sound_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound_on.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				5F972DBF1764091D00412211 /* checkbox-checked.png */,
+				5FFDD254176978EB00BDB7F6 /* sound_off.png */,
+				5FFDD255176978EB00BDB7F6 /* sound_on.png */,
 				5F972DC01764091D00412211 /* checkbox.png */,
 				34D1945D1747E5B800193599 /* ezV-Info.plist */,
 				34D1945E1747E5B800193599 /* InfoPlist.strings */,
@@ -384,6 +390,8 @@
 				5F2DF9D817671CA900B33FE6 /* DataLanguages.sqlite in Resources */,
 				5F94487C1768DB9E005F125A /* LanguageVC.xib in Resources */,
 				5F94487E1768DC6C005F125A /* LanguageVC_iphone.xib in Resources */,
+				5FFDD256176978EB00BDB7F6 /* sound_off.png in Resources */,
+				5FFDD257176978EB00BDB7F6 /* sound_on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

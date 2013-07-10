@@ -84,7 +84,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:customCellIdentifier];
     }
     cell.textLabel.text = [arrayOfCourses objectAtIndex:indexPath.row];
-    cell.textLabel.textColor = [UIColor blueColor];
+    cell.textLabel.textColor = [UIColor blackColor];
     return cell;
 }
 

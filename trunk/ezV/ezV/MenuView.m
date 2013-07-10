@@ -45,8 +45,6 @@
     return YES;
 }
 
-
-
 //Cac lua chon cho AlertView cua tung muc
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSInteger alertTag = alertView.tag;
@@ -126,7 +124,6 @@
     NSLog(@"Choose setting");
 }
 
-
 -(void)hiddenButton{
     self.learn.hidden = YES;
     self.test.hidden = YES;
@@ -134,6 +131,7 @@
     self.setting.hidden = YES;
     self.listOfCourses.hidden = YES;
 }
+
 -(void)showButton{
     self.learn.hidden = NO;
     self.test.hidden = NO;
@@ -141,6 +139,7 @@
     self.setting.hidden = NO;
     self.listOfCourses.hidden = NO;
 }
+
 - (void)viewDidUnload {
     [self setLearn:nil];
     [self setTest:nil];
@@ -178,6 +177,7 @@
     NSString *alertMenuTestButtonTitle = ((databaseList *)[myApp.arrayLanguage objectAtIndex:DATA_DOTEST_KEY]).language;
     
     UIAlertView *alertMenu = [[UIAlertView alloc] initWithTitle:alertMenuTitle message:alertMenuMessage delegate:self cancelButtonTitle:alertMenuCancelButtonTitle otherButtonTitles:alertMenuStudyButtonTitle,alertMenuTestButtonTitle, nil];
+   
     if(myApp.theFirst){
         [alertMenu show];
         [self hiddenButton];

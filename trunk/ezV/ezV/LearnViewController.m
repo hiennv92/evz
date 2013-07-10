@@ -51,6 +51,7 @@
     [self presentModalViewController:menuView animated:YES];
 //    [self dismissModalViewControllerAnimated:YES];
 }
+
 - (void)viewDidUnload {
     [self setButtonBack:nil];
     [self setTitleLabel:nil];
@@ -60,6 +61,7 @@
     [self setImageView:nil];
     [super viewDidUnload];
 }
+
 - (IBAction)buttonSound:(id)sender {
 }
 

@@ -33,15 +33,15 @@
     [self MakeLoginView];
     arrayOfCourses = [[NSMutableArray alloc]init];
     
-    [arrayOfCourses addObject:@"Bai so 1: Bang chu cai"];
-    [arrayOfCourses addObject:@"Bai so 2: Cac van, am"];
-    [arrayOfCourses addObject:@"Bai so 3: Cach dat cau"];
-    [arrayOfCourses addObject:@"Bai so 4: Nguyen am, phu am"];
-    [arrayOfCourses addObject:@"Bai so 5: Chu ngu, vi ngu"];
-    [arrayOfCourses addObject:@"Bai so 6: Cach phat am"];
-    [arrayOfCourses addObject:@"Bai so 7: Viet doan van"];
-    [arrayOfCourses addObject:@"Bai so 8: Viet bai van"];
-    [arrayOfCourses addObject:@"Bai so 9: Van ta canh"];
+    [arrayOfCourses addObject:@"Bài số 1: Bảng chữ cái tiếng Việt"];
+    [arrayOfCourses addObject:@"Bài số 2: Các âm, vần"];
+    [arrayOfCourses addObject:@"Bài số 3: Cách đặt câu"];
+    [arrayOfCourses addObject:@"Bài số 4: Nguyên âm, phụ âm"];
+    [arrayOfCourses addObject:@"Bài số 5: Chủ ngữ, vị ngữ"];
+    [arrayOfCourses addObject:@"Bài số 6: Cách phát âm"];
+    [arrayOfCourses addObject:@"Bài số 7: Viết đoạn văn"];
+    [arrayOfCourses addObject:@"Bài số 8: Viết bài văn"];
+    [arrayOfCourses addObject:@"Bài số 9: Cac loại câu"];
 
     
     [super viewDidLoad];
